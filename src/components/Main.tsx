@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { LanguageContextObject } from "../context/LanguageContext";
+
 const Main = () => {
+  const { language }: any = useContext(LanguageContextObject);
   return (
     <>
       <div>
