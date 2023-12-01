@@ -1,6 +1,0 @@
-#mainpage #content p:last-child {
-  @apply first-line:text-black text-lg font-normal font-['Inter'] leading-loose tracking-wide;
-}
-#mainpage #content p span {
-  @apply text-rose-700;
-}

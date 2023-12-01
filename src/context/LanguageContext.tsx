@@ -11,7 +11,7 @@ const LanguageContextProvider = ({ children }: any) => {
       .post("https://reqres.in/api/users", languages)
       .then(function (response) {
         console.log(response.data);
-        setLanguage(response.data.turkish);
+        setLanguage(response.data.english);
       })
       .catch(function (error) {
         console.log(error);
