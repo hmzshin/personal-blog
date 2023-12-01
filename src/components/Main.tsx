@@ -39,7 +39,15 @@ const Main = () => {
             <img src={linkedin} alt="linkedin" />
             <img src={github} alt="github" />
           </div>
-          <>{language.mainpage.content.p3}</>
+          <p className=" w-[666px] text-gray-950 text-[42px] font-medium font-['Inter'] leading-[64px] tracking-wide">
+            {language.mainpage.content.p3.p1}{" "}
+            <span> {language.mainpage.content.p3.span1}</span>
+            {language.mainpage.content.p3.p2}{" "}
+            <span> {language.mainpage.content.p3.span2}</span>
+            {language.mainpage.content.p3.p3} <br />
+            {language.mainpage.content.p3.p4}{" "}
+            <span> {language.mainpage.content.p3.span2}</span>
+          </p>
         </section>
         <section className="flex w-2/4">
           <div>

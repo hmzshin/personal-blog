@@ -15,13 +15,15 @@ export const languages = {
       content: {
         p1: "Hi! 👋",
         p2: "I’m Hamza. I’m a full-stack developer. I can craft solid and scalable frontend products. Let’s meet!",
-        p3: (
-          <p>
-            Currently {<span>Freelancing</span>} for{" "}
-            {<span>UX, UI, & Web Design</span>} Project . <br /> Invite me to
-            join your team {"->"} {<span>hamzasahin@outlook.com</span>}
-          </p>
-        ),
+        p3: {
+          p1: "Currently",
+          span1: "Freelancing",
+          p2: "for",
+          span2: "UX, UI, & Web Design",
+          p3: "Project .",
+          p4: "Invite me to join your team->",
+          span3: "hamzasahin@outlook.com",
+        },
       },
     },
     skills: {
@@ -88,14 +90,15 @@ export const languages = {
       content: {
         p1: "Merhaba! 👋",
         p2: "Ben Hamza. Tam yığın geliştiriciyim. Sağlam ve ölçeklenebilir ön uç ürünleri oluşturabilirim. Tanışalım!",
-        p3: (
-          <p>
-            Şu anda <span>Freelancing</span> olarak,{" "}
-            <span>UX, UI ve Web Tasarım</span> Projesi'nde bulunuyorum. <br />{" "}
-            Beni takımınıza davet edin {"->"}{" "}
-            {<span>hamzasahin@outlook.com</span>}
-          </p>
-        ),
+        p3: {
+          p1: "Şu anda ",
+          span1: "Freelancing",
+          p2: " olarak",
+          span2: "UX, UI, & Web Tasarım",
+          p3: "Projesi'nde bulunuyorum.",
+          p4: "Beni takımınıza davet edin -> ",
+          span3: "hamzasahin@outlook.com",
+        },
       },
     },
     skills: {
