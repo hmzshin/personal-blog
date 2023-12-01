@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import { languages } from "../data";
+import { languages } from "../data.tsx";
 
 export const LanguageContextObject = createContext({});
 

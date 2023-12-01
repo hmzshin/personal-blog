@@ -10,13 +10,18 @@ export const languages = {
     mainpage: {
       header: {
         theme: "DARK MODE",
-        language: "TÜRKÇE'YE GEÇ",
+        language: { strong: "TÜRKÇE", span: "'YE GEÇ" },
       },
       content: {
         p1: "Hi! 👋",
         p2: "I’m Hamza. I’m a full-stack developer. I can craft solid and scalable frontend products. Let’s meet!",
-        p3: "Currently Freelancing for UX, UI, & Web Design Project . ",
-        p4: "Invite me to join your team ->",
+        p3: (
+          <p>
+            Currently {<span>Freelancing</span>} for{" "}
+            {<span>UX, UI, & Web Design</span>} Project . <br /> Invite me to
+            join your team {"->"} {<span>hamzasahin@outlook.com</span>}
+          </p>
+        ),
       },
     },
     skills: {
@@ -83,8 +88,14 @@ export const languages = {
       content: {
         p1: "Merhaba! 👋",
         p2: "Ben Hamza. Tam yığın geliştiriciyim. Sağlam ve ölçeklenebilir ön uç ürünleri oluşturabilirim. Tanışalım!",
-        p3: "Şu anda UX, UI ve Web Tasarım Projesi için serbest çalışıyorum.",
-        p4: "Beni takımınıza davet edin -> ",
+        p3: (
+          <p>
+            Şu anda <span>Freelancing</span> olarak,{" "}
+            <span>UX, UI ve Web Tasarım</span> Projesi'nde bulunuyorum. <br />{" "}
+            Beni takımınıza davet edin {"->"}{" "}
+            {<span>hamzasahin@outlook.com</span>}
+          </p>
+        ),
       },
     },
     skills: {
