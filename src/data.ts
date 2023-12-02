@@ -19,21 +19,19 @@ export const languages = {
         },
       },
     },
-    skills: {
-      header: "Skills",
-      content: {},
-    },
     profile: {
       header: "Profile",
       basicInfo: {
         header: "Basic Information",
-        body: {
-          "Birth Date": "10.06.1995",
-          "City of Residence": "Ankara",
-          "Educational Status":
+        body: [
+          ["Birth Date", "10.06.1995"],
+          ["City of Residence", "Ankara"],
+          [
+            "Educational Status",
             "Orta Doğu Teknik Üniversitesi,  İnşaah Mühendisliği Lisans,2019",
-          "Preferred Working Position": "Frontend, UI",
-        },
+          ],
+          ["Preferred Working Position", "Frontend, UI"],
+        ],
       },
       aboutMe: {
         header: "About Me",
