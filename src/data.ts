@@ -20,7 +20,7 @@ export const languages = {
           span1: "Freelancing",
           p2: "for",
           span2: "UX, UI, & Web Design",
-          p3: "Project .",
+          p3: "Project.",
           p4: "Invite me to join your team->",
           span3: "hamzasahin@outlook.com",
         },
@@ -85,7 +85,7 @@ export const languages = {
     mainpage: {
       header: {
         theme: "KARANLIK MOD",
-        language: "SWITCH TO ENGLISH",
+        language: { strong: "ENGLISH" },
       },
       content: {
         p1: "Merhaba! 👋",
