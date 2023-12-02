@@ -12,11 +12,12 @@ const Profile = () => {
         <h3 className=" text-black text-4xl font-medium font-['Inter'] tracking-tight">
           {header}
         </h3>
-        <div className="flex flex-col gap-5 items-center justify-center text-black text-lg font-semibold font-['Inter'] tracking-tight">
+
+        <div className="flex flex-col gap-5 p-5 items-center justify-center text-black text-lg font-semibold font-['Inter'] tracking-tight bg-white rounded-xl shadow-[5px_5px_0px_0px] shadow-neutral-500">
           <h4 className="text-pink-600 text-2xl font-normal font-['Playfair Display'] tracking-tight">
             {basicInfo.header}
           </h4>
-          <div className="flex">
+          <div id="basicIno" className="flex">
             <section className="flex flex-col gap-3">
               {basicInfo.body.map((key: any, index: number) => (
                 <div
@@ -31,10 +32,21 @@ const Profile = () => {
             </section>
           </div>
         </div>
-        <div className="">
-          <div className=" bg-neutral-600 bg-opacity-50 rounded-xl" />
-          <div className=" bg-white rounded-xl" />
-          <div className=" text-black text-lg font-semibold font-['Inter'] tracking-tight"></div>
+
+        <div
+          id="aboutMe"
+          className="flex flex-col items-center justify-center gap-5"
+        >
+          <h4 className="text-black text-2xl font-normal font-['Playfair Display'] tracking-wide">
+            {aboutMe.header}
+          </h4>
+          <div className=" flex flex-col gap-10">
+            {Object.values(aboutMe.body).map((item: any) => (
+              <p className="text-black text-lg font-normal font-['Inter'] leading-[27px] tracking-tight">
+                {item}
+              </p>
+            ))}
+          </div>
         </div>
       </div>
     </section>
