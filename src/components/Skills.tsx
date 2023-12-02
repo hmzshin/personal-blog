@@ -18,9 +18,9 @@ const Skills = () => {
   return (
     <section
       id="skills"
-      className=" flex flex-col justify-center items-center gap-5  bg-zinc-100 "
+      className=" flex flex-col justify-center items-center gap-5 py-10 "
     >
-      <h3 className="text-gray-950 text-5xl font-medium font-['Inter'] tracking-wide">
+      <h3 className="text-gray-950 text-2xl font-medium font-['Inter'] tracking-wide">
         Skills
       </h3>
       <div className="flex flex-wrap justify-center gap-5 px-[10%]">
