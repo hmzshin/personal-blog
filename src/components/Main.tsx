@@ -1,22 +1,56 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { LanguageContextObject } from "../context/LanguageContext";
 import linkedin from "../assets/main/LinkedIn.svg";
 import github from "../assets/main/github.svg";
 import profilImg from "../assets/main/mainpage-profile.svg";
 import rectangle from "../assets/main/Rectangle 18.png";
+import { ThemeContextObject } from "../context/ThemeContext";
 
 const Main = () => {
   const { language }: any = useContext(LanguageContextObject);
+  const { theme, changeTheme }: any = useContext(ThemeContextObject);
   const { header, content } = language.mainpage;
 
+  function themeHandler() {
+    if (theme == "dark") {
+      changeTheme("light");
+    } else {
+      changeTheme("dark");
+    }
+  }
+
+  useEffect(() => {
+    console.log("theme changed>", theme);
+  }, [theme]);
   return (
     <section id="mainpage" className="bg-zinc-100">
       <div className="flex flex-col items-center justify-center relative ">
-        <div className="flex gap-8 mt-20 ">
-          <label className="text-neutral-500 text-base font-bold font-['Inter'] tracking-wider">
-            {header.theme}
-            <input name="theme" type="checkbox" />
+        <div className="flex gap-8 mt-20">
+          <label className="flex items-center gap-3 ">
+            {theme == "dark" ? (
+              <div className="inline-block w-[55px] h-6  bg-pink-600  rounded-[100px] relative transition-all duration-300 ease-linear ">
+                <div className="w-[15px] h-4 bg-amber-200 rounded-full absolute top-1 right-1 transition-all duration-300 ease-in-out " />
+                <div className="w-[15px] h-4 rounded-full absolute top-1 left-[10px] transition-all" />
+              </div>
+            ) : (
+              <div className="inline-block w-[55px] h-6  rounded-[100px] bg-black relative transition-all duration-300 ease-in-out ">
+                <div className="w-[15px] h-4  bg-amber-200 rounded-full absolute top-1 left-1 " />
+                <div className="w-[15px] h-4  rounded-full bg-black absolute top-1 left-[10px] transition-all duration-300 ease-linear  " />
+              </div>
+            )}
+
+            <span className="text-neutral-500 text-base font-bold font-['Inter'] tracking-wider">
+              {header.theme}
+            </span>
+
+            <input
+              name="theme"
+              type="checkbox"
+              className="invisible"
+              onClick={themeHandler}
+            />
           </label>
+
           <label>
             <span className="text-pink-600 text-base font-bold font-['Inter'] tracking-wider">
               {header.language.strong}
