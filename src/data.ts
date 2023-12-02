@@ -73,7 +73,24 @@ export const languages = {
 
     footer: {
       body: "Let’s work together on your next product.",
-      links: ["Github", "Personal Blog", "Linkedin", "Email"],
+      links: [
+        {
+          page: "Github",
+          url: "https://github.com/hmzshin",
+          color: "text-blue-600",
+        },
+        {
+          page: "Personal Blog",
+          url: "https://hmzshin.github.io/personal-blog",
+          color: "text-gray-950",
+        },
+        {
+          page: "Linkedin",
+          url: "https://www.linkedin.com/in/hamza-%C5%9Fahin-4a351b142/",
+          color: "text-sky-600",
+        },
+        { page: "Email", url: "", color: "text-rose-700" },
+      ],
     },
   },
   turkish: {
@@ -127,24 +144,43 @@ export const languages = {
           explanation:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
           skills: ["react", "vercel", "axios", "router "],
+          bgColor: "bg-blue-100",
           gitHubLink: "#",
           appLink: "#",
-          img: "",
+          img: project1,
         },
         {
           header: "Sıkıldınız mı?",
           explanation:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
           skills: ["react", "redux", "axios", "router", "vercel"],
+          bgColor: "bg-green-100",
           gitHubLink: "#",
           appLink: "#",
-          img: "",
+          img: project2,
         },
       ],
     },
     footer: {
       body: "Birlikte bir sonraki ürününüz üzerinde çalışalım.",
-      links: ["Github", "Kişisel Blog", "Linkedin", "E-posta"],
+      links: [
+        {
+          page: "Github",
+          url: "https://github.com/hmzshin",
+          color: "text-blue-600",
+        },
+        {
+          page: "Personal Blog",
+          url: "https://hmzshin.github.io/personal-blog",
+          color: "text-gray-950",
+        },
+        {
+          page: "Linkedin",
+          url: "https://www.linkedin.com/in/hamza-%C5%9Fahin-4a351b142/",
+          color: "text-sky-600",
+        },
+        { page: "Email", url: "", color: "text-rose-700" },
+      ],
     },
   },
 };
