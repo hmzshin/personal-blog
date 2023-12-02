@@ -1,10 +1,3 @@
-import react from "./assets/react.png";
-import js from "./assets/js.png";
-import redux from "./assets/redux.png";
-import node from "./assets/node.png";
-import vscode from "./assets/vscode.png";
-import figma from "./assets/figma.png";
-
 export const languages = {
   english: {
     mainpage: {
@@ -28,10 +21,7 @@ export const languages = {
     },
     skills: {
       header: "Skills",
-      content: {
-        svgs: [js, react, redux, node, vscode, figma],
-        texts: ["JAVASCRIPT", "REACT", "REDUX", "NODE", "VS CODE", "FIGMA"],
-      },
+      content: {},
     },
     profile: {
       header: "Profile",
@@ -101,13 +91,7 @@ export const languages = {
         },
       },
     },
-    skills: {
-      header: "Yetenekler",
-      content: {
-        svgs: ["js", "react", "redux", "node", "vscode", "figma"],
-        texts: ["JAVASCRIPT", "REACT", "REDUX", "NODE", "VS CODE", "FIGMA"],
-      },
-    },
+
     profile: {
       header: "Profil",
       basicInfo: {

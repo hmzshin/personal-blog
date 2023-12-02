@@ -1,6 +1,5 @@
 import { useContext } from "react";
 import { LanguageContextObject } from "../context/LanguageContext";
-import "./css/Main.css";
 import linkedin from "../assets/main/LinkedIn.svg";
 import github from "../assets/main/github.svg";
 import profilImg from "../assets/main/mainpage-profile.svg";
@@ -10,7 +9,7 @@ const Main = () => {
   const { language }: any = useContext(LanguageContextObject);
   const { mainpage } = language;
   return (
-    <section id="mainpage" className="  bg-zinc-100 ">
+    <section id="mainpage" className="bg-zinc-100">
       <div className="flex flex-col items-center justify-center relative ">
         <div className="flex gap-8 mt-20 ">
           <label className="text-neutral-500 text-base font-bold font-['Inter'] tracking-wider">
