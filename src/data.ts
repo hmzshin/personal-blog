@@ -1,3 +1,5 @@
+import project1 from "./assets/projects/project1.png";
+import project2 from "./assets/projects/project2.png";
 export const languages = {
   english: {
     mainpage: {
@@ -34,7 +36,7 @@ export const languages = {
         ],
       },
       aboutMe: {
-        header: "About Me",
+        header: "About me",
         body: {
           p1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
           p2: "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam! ",
@@ -50,16 +52,21 @@ export const languages = {
           explanation:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
           skills: ["react", "vercel", "axios", "router "],
-          github: "View on Github",
-          goTo: "Go to app",
+          bgColor: "bg-blue-100",
+          gitHubLink: "#",
+          appLink: "#",
+          img: project1,
         },
+
         {
           header: "Are you bored?",
           explanation:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
           skills: ["react", "redux", "axios", "router", "vercel"],
-          github: "View on Github",
-          goTo: "Go to app",
+          bgColor: "bg-green-100",
+          gitHubLink: "#",
+          appLink: "#",
+          img: project2,
         },
       ],
     },
@@ -120,16 +127,18 @@ export const languages = {
           explanation:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
           skills: ["react", "vercel", "axios", "router "],
-          github: "Github'da Görüntüle",
-          goTo: "Uygulamaya Git",
+          gitHubLink: "#",
+          appLink: "#",
+          img: "",
         },
         {
           header: "Sıkıldınız mı?",
           explanation:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
           skills: ["react", "redux", "axios", "router", "vercel"],
-          github: "Github'da Görüntüle",
-          goTo: "Uygulamaya Git",
+          gitHubLink: "#",
+          appLink: "#",
+          img: "",
         },
       ],
     },
