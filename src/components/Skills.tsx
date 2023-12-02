@@ -24,8 +24,11 @@ const Skills = () => {
         Skills
       </h3>
       <div className="flex flex-wrap justify-center gap-5 px-[10%]">
-        {data.map((skill: any) => (
-          <div className="flex-col justify-start items-center gap-2.5 inline-flex">
+        {data.map((skill: any, index: number) => (
+          <div
+            key={index}
+            className="flex-col justify-start items-center gap-2.5 inline-flex"
+          >
             <img className="w-20 h-20 rounded-md" src={skill.svg} />
             <div className="text-neutral-500 text-lg font-medium font-['Inter'] uppercase leading-9">
               {skill.text}

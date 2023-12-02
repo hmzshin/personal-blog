@@ -15,7 +15,7 @@ const Main = () => {
         <div className="flex gap-8 mt-20 ">
           <label className="text-neutral-500 text-base font-bold font-['Inter'] tracking-wider">
             {header.theme}
-            <input type="checkbox" />
+            <input name="theme" type="checkbox" />
           </label>
           <label>
             <span className="text-pink-600 text-base font-bold font-['Inter'] tracking-wider">
@@ -25,7 +25,7 @@ const Main = () => {
               {header.language.span}
             </span>
 
-            <input type="checkbox" />
+            <input name="language" type="checkbox" />
           </label>
         </div>
         <div className="flex justify-center flex-wrap py-10 px-[10%] gap-10">

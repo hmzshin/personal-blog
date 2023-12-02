@@ -5,16 +5,15 @@ const Profile = () => {
   const { language }: any = useContext(LanguageContextObject);
   const { header, basicInfo, aboutMe } = language.profile;
 
-  console.log("bu neden olmuyor prifile", basicInfo.body);
   return (
-    <section id="language.profile" className="bg-zinc-100 py-10">
+    <section id="profile" className="bg-zinc-100 py-10">
       <div className=" flex flex-col  items-center justify-center px-[10%] gap-5">
         <h3 className=" text-black text-4xl font-medium font-['Inter'] tracking-tight">
           {header}
         </h3>
 
         <div className="flex flex-col gap-5 p-5 items-center justify-center text-black text-lg font-semibold font-['Inter'] tracking-tight bg-white rounded-xl shadow-[5px_5px_0px_0px] shadow-neutral-500">
-          <h4 className="text-pink-600 text-2xl font-normal font-['Playfair Display'] tracking-tight">
+          <h4 className="text-pink-600 text-2xl font-normal font-['Playfair Display'] tracking-tight ">
             {basicInfo.header}
           </h4>
           <div id="basicIno" className="flex">
@@ -35,14 +34,18 @@ const Profile = () => {
 
         <div
           id="aboutMe"
-          className="flex flex-col items-center justify-center gap-5"
+          className="flex flex-col items-center justify-center gap-5 relative"
         >
-          <h4 className="text-black text-2xl font-normal font-['Playfair Display'] tracking-wide">
+          <div className="absolute top-5 right-1/2 w-[70px] h-[18px] bg-blue-300 rounded z-0" />
+          <h4 className="text-black text-2xl font-normal font-['Playfair Display'] tracking-wide z-10">
             {aboutMe.header}
           </h4>
           <div className=" flex flex-col gap-10">
-            {Object.values(aboutMe.body).map((item: any) => (
-              <p className="text-black text-lg font-normal font-['Inter'] leading-[27px] tracking-tight">
+            {Object.values(aboutMe.body).map((item: any, index: number) => (
+              <p
+                key={index}
+                className="text-black text-lg font-normal font-['Inter'] leading-[27px] tracking-tight"
+              >
                 {item}
               </p>
             ))}
