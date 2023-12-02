@@ -6,6 +6,7 @@ import { useContext, useEffect } from "react";
 import { LanguageContextObject } from "./context/LanguageContext";
 import axios from "axios";
 import { languages } from "./data";
+import Projects from "./components/Projects";
 
 function App() {
   const { language, changeLanguage }: any = useContext(LanguageContextObject);
@@ -26,6 +27,7 @@ function App() {
           <Main />
           <Skills />
           <Profile />
+          <Projects />
         </>
       ) : (
         <div>yükleniyor</div>
