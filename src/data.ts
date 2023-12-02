@@ -94,13 +94,15 @@ export const languages = {
       header: "Profil",
       basicInfo: {
         header: "Temel Bilgiler",
-        body: {
-          "Doğum Tarihi": "10.06.1995",
-          "Yaşadığı Şehir": "Ankara",
-          "Eğitim Durumu":
+        body: [
+          ["Doğum Tarihi", "10.06.1995"],
+          ["Yaşadığı Şehir", "Ankara"],
+          [
+            "Eğitim Durumu",
             "Orta Doğu Teknik Üniversitesi, İnşaat Mühendisliği Lisans, 2019",
-          "Tercih Edilen Çalışma Pozisyonu": "Ön Uç, UI",
-        },
+          ],
+          ["Tercih Edilen Çalışma Pozisyonu", "Ön Uç, UI"],
+        ],
       },
       aboutMe: {
         header: "Hakkımda",
