@@ -7,6 +7,7 @@ import { LanguageContextObject } from "./context/LanguageContext";
 import axios from "axios";
 import { languages } from "./data";
 import Projects from "./components/Projects";
+import Footer from "./components/Footer";
 
 function App() {
   const { language, changeLanguage }: any = useContext(LanguageContextObject);
@@ -28,6 +29,7 @@ function App() {
           <Skills />
           <Profile />
           <Projects />
+          <Footer />
         </>
       ) : (
         <div>yükleniyor</div>
