@@ -3,8 +3,6 @@ import { createContext, useReducer } from "react";
 export const DataContextObject = createContext({});
 
 const DataContextProvider = ({ children }: any) => {
-  const [data, dispatchData] = useReducer(dataReducer, {});
-
   function dataReducer(state: any, action: any) {
     switch (action.type) {
       case "SET_DATA":
@@ -14,6 +12,7 @@ const DataContextProvider = ({ children }: any) => {
         return state;
     }
   }
+  const [data, dispatchData] = useReducer(dataReducer, {});
 
   return (
     <DataContextObject.Provider value={{ data, dispatchData }}>

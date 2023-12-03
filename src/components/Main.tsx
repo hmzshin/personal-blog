@@ -1,21 +1,23 @@
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { LanguageContextObject } from "../context/LanguageContext";
 import linkedin from "../assets/main/LinkedIn.svg";
+import linkedinDark from "../assets/main/LinkedIn-dark.png";
 import github from "../assets/main/github.svg";
+import githubDark from "../assets/main/github-dark.png";
 import profilImg from "../assets/main/mainpage-profile.svg";
 import rectangle from "../assets/main/Rectangle 18.png";
 import { ThemeContextObject } from "../context/ThemeContext";
 
 const Main = () => {
   const { language, dispatchLanguage }: any = useContext(LanguageContextObject);
-  const { theme, changeTheme }: any = useContext(ThemeContextObject);
+  const { theme, dispatchTheme }: any = useContext(ThemeContextObject);
   const { header, content } = language.mainpage;
 
   function toggleTheme() {
-    if (theme == "dark") {
-      changeTheme("light");
+    if (theme == "light") {
+      dispatchTheme({ type: "SET_DARK_MODE" });
     } else {
-      changeTheme("dark");
+      dispatchTheme({ type: "SET_LIGHT_MODE" });
     }
   }
   function toggleLanguage() {
@@ -26,15 +28,12 @@ const Main = () => {
     }
   }
 
-  useEffect(() => {
-    console.log("theme changed>", theme);
-  }, [theme]);
   return (
-    <section id="mainpage" className="bg-zinc-100">
+    <section id="mainpage" className="bg-zinc-100 dark:bg-zinc-800">
       <div className="flex flex-col items-center justify-center relative ">
         <div className="flex gap-8 mt-20">
           <label className="flex items-center gap-3 ">
-            {theme == "dark" ? (
+            {theme == "light" ? (
               <div className="inline-block w-[55px] h-6  bg-pink-600  rounded-[100px] relative transition-all duration-300 ease-linear ">
                 <div className="w-[15px] h-4 bg-amber-200 rounded-full absolute top-1 right-1 transition-all duration-300 ease-in-out " />
                 <div className="w-[15px] h-4 rounded-full absolute top-1 left-[10px] transition-all" />
@@ -47,7 +46,7 @@ const Main = () => {
             )}
 
             <span className="text-neutral-500 text-base font-bold font-['Inter'] tracking-wider">
-              {header.theme}
+              {theme.toUpperCase()} MODE
             </span>
 
             <input
@@ -62,11 +61,16 @@ const Main = () => {
             <span className="text-pink-600 text-base font-bold font-['Inter'] tracking-wider">
               {header.language.strong}
             </span>
-            <span className="text-neutral-500 text-base font-bold font-['Inter'] tracking-wider">
+            {/* <span className="text-neutral-500 text-base font-bold font-['Inter'] tracking-wider">
               {header.language.span}
-            </span>
+            </span> */}
 
-            <input name="language" type="checkbox" onClick={toggleLanguage} />
+            <input
+              name="language"
+              type="checkbox"
+              className="invisible"
+              onClick={toggleLanguage}
+            />
           </label>
         </div>
         <div className="flex justify-center flex-wrap py-10 px-[10%] gap-10">
@@ -74,19 +78,28 @@ const Main = () => {
             id="content"
             className="flex flex-col items-center justify-center min-w-2/4 gap-5 relative"
           >
-            <div className="absolute top-[88px] -left-2 w-[100px] h-[25px] bg-pink-600 rounded z-[0] " />
-            <div className="absolute -top-[200px] left-60 w-28 h-28 bg-zinc-300 rounded-full" />
-            <p className="text-black text-2xl font-normal font-['Inter'] tracking-[3px]">
+            <div
+              id="decoration"
+              className="absolute top-[88px] -left-2 w-[100px] h-[25px] bg-pink-600 rounded z-[0] "
+            />
+            <div
+              id="decoration"
+              className="absolute -top-[200px] left-60 w-28 h-28 bg-zinc-300 rounded-full"
+            />
+            <p className="text-black dark:text-white text-2xl font-normal font-['Inter'] tracking-[3px]">
               {content.p1}
             </p>
-            <p className="  text-gray-950 text-3xl font-medium font-['Inter'] leading-[64px] tracking-wide z-[1]">
+            <p className="  text-gray-950  dark:text-white  text-3xl font-medium font-['Inter'] leading-[64px] tracking-wide z-[1]">
               {content.p2}
             </p>
             <div className="flex gap-5">
-              <img src={linkedin} alt="linkedin" />
-              <img src={github} alt="github" />
+              <img
+                src={theme == "dark" ? linkedinDark : linkedin}
+                alt="linkedin"
+              />
+              <img src={theme == "dark" ? githubDark : github} alt="github" />
             </div>
-            <p className=" text-black text-base font-normal font-['Inter'] leading-loose tracking-wide">
+            <p className=" text-black  dark:text-white  text-base font-normal font-['Inter'] leading-loose tracking-wide">
               {content.p3.p1}{" "}
               <span className=" text-rose-700">{content.p3.span1} </span>
               {content.p3.p2}{" "}

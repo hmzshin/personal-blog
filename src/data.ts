@@ -54,6 +54,7 @@ export const languages = {
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
           skills: ["react", "vercel", "axios", "router "],
           bgColor: "bg-blue-100",
+          bgColorDark: "bg-[#2D3235]",
           gitHubLink: "#",
           appLink: "#",
           img: project1,
@@ -64,7 +65,8 @@ export const languages = {
           explanation:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
           skills: ["react", "redux", "axios", "router", "vercel"],
-          bgColor: "bg-green-100",
+          bgColor: "bg-[#D9F6F1]",
+          bgColorDark: "bg-[#495351]",
           gitHubLink: "#",
           appLink: "#",
           img: project2,
