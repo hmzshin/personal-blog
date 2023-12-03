@@ -217,4 +217,190 @@ export const languages = {
       ],
     },
   },
+  spanish: {
+    code: "es",
+    mainpage: {
+      header: {
+        themeDark: "MODO OSCURO",
+        themeLight: "MODO CLARO",
+        language: { strong: "TÜRKÇE" },
+      },
+      content: {
+        p1: "¡Hola! 👋",
+        p2: "Soy Hamza. Soy un desarrollador full-stack. Puedo crear productos frontend sólidos y escalables. ¡Vamos a conocernos!",
+        p3: {
+          p1: "Actualmente",
+          span1: "trabajando como freelance",
+          p2: "en proyectos de",
+          span2: "UX, UI y diseño web",
+          p3: "Invítame a unirme a tu equipo ->",
+          span3: "hamzasahin@outlook.com",
+        },
+      },
+    },
+    skills: "Habilidades",
+    profile: {
+      header: "Perfil",
+      basicInfo: {
+        header: "Información Básica",
+        body: [
+          ["Fecha de nacimiento", "10.06.1995"],
+          ["Ciudad de residencia", "Ankara"],
+          [
+            "Estado educativo",
+            "Orta Doğu Teknik Üniversitesi, Licenciatura en Ingeniería Civil, 2019",
+          ],
+          ["Posición de trabajo preferida", "Frontend, UI"],
+        ],
+      },
+      aboutMe: {
+        header: "Sobre mí",
+        body: {
+          p1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+          p2: "Mínima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+        },
+      },
+    },
+    projects: {
+      header: "Proyectos",
+      body: [
+        {
+          header: "Chistes aleatorios",
+          explanation:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+          skills: ["react", "vercel", "axios", "router"],
+          bgColor: "bg-blue-100",
+          bgColorDark: "bg-[#2D3235]",
+          gitHubText: "Ver en Github",
+          gitHubLink: "#",
+          appText: "Ir a la aplicación",
+          appLink: "#",
+        },
+        {
+          header: "¿Estás aburrido?",
+          explanation:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+          skills: ["react", "redux", "axios", "router", "vercel"],
+          bgColor: "bg-[#D9F6F1]",
+          bgColorDark: "bg-[#495351]",
+          gitHubLink: "#",
+          appLink: "#",
+        },
+      ],
+    },
+    footer: {
+      body: "Trabajemos juntos en tu próximo producto.",
+      links: [
+        {
+          page: "Github",
+          url: "https://github.com/hmzshin",
+          color: "text-blue-600",
+        },
+        {
+          page: "Blog personal",
+          url: "https://hmzshin.github.io/personal-blog",
+          color: "text-gray-950",
+        },
+        {
+          page: "Linkedin",
+          url: "https://www.linkedin.com/in/hamza-%C5%9Fahin-4a351b142/",
+          color: "text-sky-600",
+        },
+        { page: "Correo electrónico", url: "", color: "text-rose-700" },
+      ],
+    },
+  },
+  french: {
+    code: "fr",
+    mainpage: {
+      header: {
+        themeDark: "MODE SOMBRE",
+        themeLight: "MODE CLAIR",
+        language: { strong: "TÜRKÇE" },
+      },
+      content: {
+        p1: "Salut! 👋",
+        p2: "Je suis Hamza. Je suis développeur full-stack. Je peux créer des produits frontend solides et évolutifs. Faisons connaissance!",
+        p3: {
+          p1: "Actuellement",
+          span1: "freelance",
+          p2: "pour des projets de",
+          span2: "UX, UI et design web",
+          p3: "Invite-moi à rejoindre ton équipe ->",
+          span3: "hamzasahin@outlook.com",
+        },
+      },
+    },
+    skills: "Compétences",
+    profile: {
+      header: "Profil",
+      basicInfo: {
+        header: "Informations de base",
+        body: [
+          ["Date de naissance", "10.06.1995"],
+          ["Ville de résidence", "Ankara"],
+          [
+            "Statut éducatif",
+            "Orta Doğu Teknik Üniversitesi, Licence en Génie Civil, 2019",
+          ],
+          ["Poste de travail préféré", "Frontend, UI"],
+        ],
+      },
+      aboutMe: {
+        header: "À propos de moi",
+        body: {
+          p1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+          p2: "Minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+        },
+      },
+    },
+    projects: {
+      header: "Projets",
+      body: [
+        {
+          header: "Blagues aléatoires",
+          explanation:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+          skills: ["react", "vercel", "axios", "router"],
+          bgColor: "bg-blue-100",
+          bgColorDark: "bg-[#2D3235]",
+          gitHubText: "Voir sur Github",
+          gitHubLink: "#",
+          appText: "Aller à l'application",
+          appLink: "#",
+        },
+        {
+          header: "Tu t'ennuies ?",
+          explanation:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+          skills: ["react", "redux", "axios", "router", "vercel"],
+          bgColor: "bg-[#D9F6F1]",
+          bgColorDark: "bg-[#495351]",
+          gitHubLink: "#",
+          appLink: "#",
+        },
+      ],
+    },
+    footer: {
+      body: "Travaillons ensemble sur votre prochain produit.",
+      links: [
+        {
+          page: "Github",
+          url: "https://github.com/hmzshin",
+          color: "text-blue-600",
+        },
+        {
+          page: "Blog personnel",
+          url: "https://hmzshin.github.io/personal-blog",
+          color: "text-gray-950",
+        },
+        {
+          page: "Linkedin",
+          url: "https://www.linkedin.com/in/hamza-%C5%9Fahin-4a351b142/",
+          color: "text-sky-600",
+        },
+        { page: "Email", url: "", color: "text-rose-700" },
+      ],
+    },
+  },
 };

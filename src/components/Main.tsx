@@ -19,12 +19,8 @@ const Main = () => {
       dispatchTheme({ type: "SET_LIGHT_MODE" });
     }
   }
-  function toggleLanguage() {
-    if (language.code == "en") {
-      dispatchLanguage({ type: "tr" });
-    } else {
-      dispatchLanguage({ type: "en" });
-    }
+  function selectLanguage(value: any) {
+    dispatchLanguage({ type: value });
   }
 
   return (
@@ -64,19 +60,16 @@ const Main = () => {
           </label>
 
           <label>
-            <span className="text-pink-600 text-base font-bold font-['Inter'] tracking-wider">
-              {header.language.strong}
-            </span>
-            {/* <span className="text-neutral-500 text-base font-bold font-['Inter'] tracking-wider">
-              {header.language.span}
-            </span> */}
-
-            <input
+            <select
               name="language"
-              type="checkbox"
-              className="invisible"
-              onClick={toggleLanguage}
-            />
+              onChange={(e) => selectLanguage(e.target.value)}
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            >
+              <option value="en">ENGLISH</option>
+              <option value="tr">TÜRKÇE</option>
+              <option value="es">{"español".toUpperCase()}</option>
+              <option value="fr">{"français".toUpperCase()}</option>
+            </select>
           </label>
         </div>
         <div className="flex justify-center flex-wrap md:flex-nowrap py-10 px-[10%] gap-10">
