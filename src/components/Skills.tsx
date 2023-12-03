@@ -36,6 +36,10 @@ const Skills = () => {
           </div>
         ))}
       </div>
+      <div
+        id="decoration"
+        className="w-32 h-9 rounded-[18px] bg-[#525252] absolute bottom-10 -left-16"
+      ></div>
     </section>
   );
 };
