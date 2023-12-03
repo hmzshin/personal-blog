@@ -1,29 +1,31 @@
-import { createContext, useState, useEffect } from "react";
-import { languages } from "../data.ts";
-import axios from "axios";
+import { createContext, useContext, useReducer } from "react";
+import { DataContextObject } from "./DataContext";
 
 export const LanguageContextObject = createContext({});
 
 const LanguageContextProvider = ({ children }: any) => {
-  const [language, setLanguage] = useState(languages.english);
-  useEffect(() => {
-    axios
-      .post("https://reqres.in/api/users", languages)
-      .then(function (response) {
-        console.log(response.data);
-        setLanguage(response.data.turkish);
-      })
-      .catch(function (error) {
-        console.log(error);
-      });
-  }, []);
+  const { data }: any = useContext(DataContextObject);
+  function languageReducer(state: object, action: any) {
+    switch (action.type) {
+      case "en":
+        localStorage.setItem("language", "en");
+        return { ...data.english };
 
-  function changeLanguage(value: any) {
-    setLanguage(value);
+      case "tr":
+        localStorage.setItem("language", "tr");
+        return { ...data.turkish };
+
+      case "INITIALIZE_LANGUAGE":
+        return { ...action.payload };
+
+      default:
+        return state;
+    }
   }
+  const [language, dispatchLanguage] = useReducer(languageReducer, null);
 
   return (
-    <LanguageContextObject.Provider value={{ language, changeLanguage }}>
+    <LanguageContextObject.Provider value={{ language, dispatchLanguage }}>
       {children}
     </LanguageContextObject.Provider>
   );
