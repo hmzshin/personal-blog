@@ -2,20 +2,31 @@ import "./App.css";
 import Main from "./components/Main";
 import Profile from "./components/Profile";
 import Skills from "./components/Skills";
-import { useContext, useEffect } from "react";
-import { LanguageContextObject } from "./context/LanguageContext";
+import { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { languages } from "./data";
 import Projects from "./components/Projects";
 import Footer from "./components/Footer";
+import { DataContextObject } from "./context/DataContext";
+import { LanguageContextObject } from "./context/LanguageContext";
 
 function App() {
-  const { language, changeLanguage }: any = useContext(LanguageContextObject);
+  const { dispatchData }: any = useContext(DataContextObject);
+  const { language, dispatchLanguage }: any = useContext(LanguageContextObject);
+
   useEffect(() => {
     axios
       .post("https://reqres.in/api/users", languages)
       .then(function (response) {
-        changeLanguage(response.data.english);
+        console.log(response.data);
+        dispatchData({ type: "SET_DATA", payload: { ...response.data } });
+        const localLanguage = localStorage.getItem("language");
+        const browserLanguage = navigator.language.includes("en") ? "en" : "tr";
+        const initialData = localLanguage ? localLanguage : browserLanguage;
+
+        console.log("local", localLanguage);
+        console.log("browser", browserLanguage);
+        dispatchLanguage({ type: initialData, payload: response.data.english });
       })
       .catch(function (error) {
         console.log(error);
