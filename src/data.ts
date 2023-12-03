@@ -23,7 +23,7 @@ export const languages = {
       header: {
         themeDark: "DARK MODE",
         themeLight: "LIGHT MODE",
-        language: { strong: "TÜRKÇE", span: "'YE GEÇ" },
+        language: { strong: "TÜRKÇE" },
       },
       content: {
         p1: "Hi! 👋",
@@ -34,7 +34,7 @@ export const languages = {
           p2: "for",
           span2: "UX, UI, & Web Design",
           p3: "Project.",
-          p4: "Invite me to join your team->",
+          p4: "Invite me to join your team ->",
           span3: "hamzasahin@outlook.com",
         },
       },
