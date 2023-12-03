@@ -14,7 +14,7 @@ import { ThemeContextObject } from "./context/ThemeContext";
 function App() {
   const { dispatchData }: any = useContext(DataContextObject);
   const { language, dispatchLanguage }: any = useContext(LanguageContextObject);
-  const { theme, dispatchTheme }: any = useContext(ThemeContextObject);
+  const { dispatchTheme }: any = useContext(ThemeContextObject);
 
   useEffect(() => {
     const localLanguage = localStorage.getItem("language");
