@@ -12,6 +12,13 @@ const Main = () => {
   const { theme, dispatchTheme }: any = useContext(ThemeContextObject);
   const { header, content } = language.mainpage;
 
+  const options = [
+    { name: "english", value: "en" },
+    { name: "türkçe", value: "tr" },
+    { name: "español", value: "es" },
+    { name: "français", value: "fr" },
+  ];
+
   function toggleTheme() {
     if (theme == "light") {
       dispatchTheme({ type: "SET_DARK_MODE" });
@@ -63,12 +70,13 @@ const Main = () => {
             <select
               name="language"
               onChange={(e) => selectLanguage(e.target.value)}
-              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+              className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-auto p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             >
-              <option value="en">ENGLISH</option>
-              <option value="tr">TÜRKÇE</option>
-              <option value="es">{"español".toUpperCase()}</option>
-              <option value="fr">{"français".toUpperCase()}</option>
+              {options.map((option: any, index: number) => (
+                <option key={index} value={option.value}>
+                  {option.name.toUpperCase()}
+                </option>
+              ))}
             </select>
           </label>
         </div>
