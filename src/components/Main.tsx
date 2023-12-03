@@ -30,8 +30,8 @@ const Main = () => {
 
   return (
     <section id="mainpage" className="bg-zinc-100 dark:bg-zinc-800">
-      <div className="flex flex-col items-center justify-center relative ">
-        <div className="flex gap-8 mt-20">
+      <div className="flex flex-col items-center justify-center relative xl:w-[1280px] xl:m-auto ">
+        <div className="flex gap-8 mt-20 md:self-end md:pr-[10%]">
           <label className="flex items-center gap-3 ">
             {theme == "light" ? (
               <div className="inline-block w-[55px] h-6  bg-pink-600  rounded-[100px] relative transition-all duration-300 ease-linear ">
@@ -73,10 +73,10 @@ const Main = () => {
             />
           </label>
         </div>
-        <div className="flex justify-center flex-wrap py-10 px-[10%] gap-10">
+        <div className="flex justify-center flex-wrap md:flex-nowrap py-10 px-[10%] gap-10">
           <section
             id="content"
-            className="flex flex-col items-center justify-center min-w-2/4 gap-5 relative"
+            className="flex flex-col items-center md:items-start justify-center min-w-2/4 gap-5 relative"
           >
             <div
               id="decoration"

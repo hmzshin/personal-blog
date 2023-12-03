@@ -76,6 +76,18 @@ export const languages = {
         },
 
         {
+          header: "Random Jokes",
+          explanation:
+            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+          skills: ["react", "vercel", "axios", "router "],
+          bgColor: "bg-blue-100",
+          bgColorDark: "bg-[#2D3235]",
+          gitHubLink: "#",
+          appLink: "#",
+          img: project1,
+        },
+
+        {
           header: "Are you bored?",
           explanation:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
