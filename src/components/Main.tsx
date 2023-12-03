@@ -7,15 +7,22 @@ import rectangle from "../assets/main/Rectangle 18.png";
 import { ThemeContextObject } from "../context/ThemeContext";
 
 const Main = () => {
-  const { language }: any = useContext(LanguageContextObject);
+  const { language, dispatchLanguage }: any = useContext(LanguageContextObject);
   const { theme, changeTheme }: any = useContext(ThemeContextObject);
   const { header, content } = language.mainpage;
 
-  function themeHandler() {
+  function toggleTheme() {
     if (theme == "dark") {
       changeTheme("light");
     } else {
       changeTheme("dark");
+    }
+  }
+  function toggleLanguage() {
+    if (language.code == "en") {
+      dispatchLanguage({ type: "tr" });
+    } else {
+      dispatchLanguage({ type: "en" });
     }
   }
 
@@ -47,7 +54,7 @@ const Main = () => {
               name="theme"
               type="checkbox"
               className="invisible"
-              onClick={themeHandler}
+              onClick={toggleTheme}
             />
           </label>
 
@@ -59,7 +66,7 @@ const Main = () => {
               {header.language.span}
             </span>
 
-            <input name="language" type="checkbox" />
+            <input name="language" type="checkbox" onClick={toggleLanguage} />
           </label>
         </div>
         <div className="flex justify-center flex-wrap py-10 px-[10%] gap-10">

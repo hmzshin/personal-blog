@@ -2,6 +2,7 @@ import project1 from "./assets/projects/project1.png";
 import project2 from "./assets/projects/project2.png";
 export const languages = {
   english: {
+    code: "en",
     mainpage: {
       header: {
         theme: "DARK MODE",
@@ -94,6 +95,7 @@ export const languages = {
     },
   },
   turkish: {
+    code: "tr",
     mainpage: {
       header: {
         theme: "KARANLIK MOD",

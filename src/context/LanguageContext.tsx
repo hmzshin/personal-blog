@@ -1,16 +1,28 @@
-import { createContext, useState } from "react";
+import { createContext, useContext, useReducer } from "react";
+import { DataContextObject } from "./DataContext";
 
 export const LanguageContextObject = createContext({});
 
 const LanguageContextProvider = ({ children }: any) => {
-  const [language, setLanguage] = useState();
+  const { data }: any = useContext(DataContextObject);
+  function languageReducer(state: object, action: any) {
+    switch (action.type) {
+      case "en":
+        localStorage.setItem("language", "en");
+        return { ...data.english };
 
-  function changeLanguage(value: any) {
-    setLanguage(value);
+      case "tr":
+        localStorage.setItem("language", "tr");
+        return { ...data.turkish };
+
+      default:
+        return state;
+    }
   }
+  const [language, dispatchLanguage] = useReducer(languageReducer);
 
   return (
-    <LanguageContextObject.Provider value={{ language, changeLanguage }}>
+    <LanguageContextObject.Provider value={{ language, dispatchLanguage }}>
       {children}
     </LanguageContextObject.Provider>
   );
