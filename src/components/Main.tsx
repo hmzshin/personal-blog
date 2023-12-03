@@ -5,7 +5,6 @@ import linkedinDark from "../assets/main/LinkedIn-dark.png";
 import github from "../assets/main/github.svg";
 import githubDark from "../assets/main/github-dark.png";
 import profilImg from "../assets/main/mainpage-profile.svg";
-import rectangle from "../assets/main/Rectangle 18.png";
 import { ThemeContextObject } from "../context/ThemeContext";
 
 const Main = () => {
@@ -29,7 +28,14 @@ const Main = () => {
   }
 
   return (
-    <section id="mainpage" className="bg-zinc-100 dark:bg-zinc-800">
+    <section
+      id="mainpage"
+      className="bg-zinc-100 dark:bg-zinc-800 relative overflow-x-hidden"
+    >
+      <div
+        id="decoration"
+        className="w-[217px] h-[40px] bg-pink-600 rounded-[20px] absolute bottom-3 -right-32 md:bottom-28 lg:bottom-16 "
+      />
       <div className="flex flex-col items-center justify-center relative xl:w-[1280px] xl:m-auto ">
         <div className="flex gap-8 mt-20 md:self-end md:pr-[10%]">
           <label className="flex items-center gap-3 ">
@@ -113,7 +119,6 @@ const Main = () => {
             <div className="w-[195px] h-[195px] bg-pink-600 rounded-[16px] relative">
               <img className="absolute top-2 left-2" src={profilImg} />
             </div>
-            <img className="absolute bottom-14 right-0 w-20" src={rectangle} />
           </section>
         </div>
       </div>
