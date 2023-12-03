@@ -16,7 +16,6 @@ const Main = () => {
     { name: "english", value: "en" },
     { name: "türkçe", value: "tr" },
     { name: "español", value: "es" },
-    { name: "français", value: "fr" },
   ];
 
   function toggleTheme() {
