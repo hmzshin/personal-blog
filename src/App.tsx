@@ -28,7 +28,10 @@ function App() {
       .then(function (response) {
         console.log(response.data);
         dispatchData({ type: "SET_DATA", payload: { ...response.data } });
-        dispatchLanguage({ type: "initialize", payload: initialLanguage });
+        dispatchLanguage({
+          type: "INITIALIZE_LANGUAGE",
+          payload: initialLanguage,
+        });
       })
       .catch(function (error) {
         console.log(error);

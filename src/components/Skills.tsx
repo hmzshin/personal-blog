@@ -1,20 +1,8 @@
-import react from "../assets/skills/react.png";
-import js from "../assets/skills/js.png";
-import redux from "../assets/skills/redux.png";
-import node from "../assets/skills/node.png";
-import vscode from "../assets/skills/vscode.png";
-import figma from "../assets/skills/figma.png";
-
-const data = [
-  { svg: react, text: "REACT" },
-  { svg: redux, text: "REDUX" },
-  { svg: js, text: "JS" },
-  { svg: node, text: "NODE" },
-  { svg: vscode, text: "VS CODE" },
-  { svg: figma, text: "FIGMA" },
-];
+import { DataContextObject } from "../context/DataContext";
+import { useContext } from "react";
 
 const Skills = () => {
+  const { data }: any = useContext(DataContextObject);
   return (
     <section
       id="skills"
@@ -24,7 +12,7 @@ const Skills = () => {
         Skills
       </h3>
       <div className="flex flex-wrap justify-center gap-5 px-[10%]">
-        {data.map((skill: any, index: number) => (
+        {data.skills.map((skill: any, index: number) => (
           <div
             key={index}
             className="flex-col justify-start items-center gap-2.5 inline-flex"

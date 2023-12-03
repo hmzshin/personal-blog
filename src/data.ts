@@ -1,6 +1,21 @@
 import project1 from "./assets/projects/project1.png";
 import project2 from "./assets/projects/project2.png";
+import react from "./assets/skills/react.png";
+import js from "./assets/skills/js.png";
+import redux from "./assets/skills/redux.png";
+import node from "./assets/skills/node.png";
+import vscode from "./assets/skills/vscode.png";
+import figma from "./assets/skills/figma.png";
+
 export const languages = {
+  skills: [
+    { svg: react, text: "REACT" },
+    { svg: redux, text: "REDUX" },
+    { svg: js, text: "JS" },
+    { svg: node, text: "NODE" },
+    { svg: vscode, text: "VS CODE" },
+    { svg: figma, text: "FIGMA" },
+  ],
   english: {
     code: "en",
     mainpage: {

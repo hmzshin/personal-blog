@@ -15,7 +15,7 @@ const LanguageContextProvider = ({ children }: any) => {
         localStorage.setItem("language", "tr");
         return { ...data.turkish };
 
-      case "initialize":
+      case "INITIALIZE_LANGUAGE":
         return { ...action.payload };
 
       default:
