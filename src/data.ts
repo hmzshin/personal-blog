@@ -82,21 +82,6 @@ export const languages = {
         },
 
         {
-          header: "Random Jokes",
-          explanation:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
-          skills: ["react", "vercel", "axios", "router "],
-          bgColor: "bg-blue-100",
-          bgColorDark: "bg-[#2D3235]",
-          gitHubText: "View on Github",
-          gitHubLink: "#",
-          appText: "Go to app",
-          appLink: "#",
-          img: project1,
-          arrowRight: arrowRight,
-        },
-
-        {
           header: "Are you bored?",
           explanation:
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
@@ -186,6 +171,7 @@ export const languages = {
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
           skills: ["react", "vercel", "axios", "router "],
           bgColor: "bg-blue-100",
+          bgColorDark: "bg-[#2D3235]",
           gitHubText: "Github'da göster",
           gitHubLink: "#",
           appText: "Uygulamaya git",
@@ -199,6 +185,7 @@ export const languages = {
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
           skills: ["react", "redux", "axios", "router", "vercel"],
           bgColor: "bg-green-100",
+          bgColorDark: "bg-[#495351]",
           gitHubText: "Github'da göster",
           gitHubLink: "#",
           appText: "Uygulamaya git",
