@@ -52,7 +52,7 @@ const Main = () => {
             )}
 
             <span className="text-neutral-500 text-base font-bold font-['Inter'] tracking-wider">
-              {theme.toUpperCase()} MODE
+              {theme == "dark" ? header.themeDark : header.themeLight}
             </span>
 
             <input
@@ -112,7 +112,7 @@ const Main = () => {
               <span className=" text-rose-700">{content.p3.span2} </span>
               {content.p3.p3} <br />
               {content.p3.p4}{" "}
-              <span className=" text-rose-700">{content.p3.span2}</span>
+              <span className=" text-rose-700">{content.p3.span3}</span>
             </p>
           </section>
           <section className="flex items-center">

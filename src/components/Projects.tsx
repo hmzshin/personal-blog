@@ -30,7 +30,7 @@ const Projects = () => {
               <div className="flex flex-wrap gap-2">
                 {project.skills.map((skill: any, index: number) => (
                   <p
-                    className="w-[81px] h-8 px-5 pt-1.5 pb-2.5 bg-white dark:bg-[#525252] rounded-[76px] justify-start items-start gap-2.5 inline-flex text-base font-bold font-['PlayfairDisplay'] leading-none tracking-wide"
+                    className="w-[81px] h-8 py-1 bg-white dark:bg-[#525252] rounded-[76px]  text-xl text-center font-bold font-['PlayfairDisplay'] leading-none tracking-wide "
                     key={index}
                   >
                     {skill}
@@ -38,8 +38,11 @@ const Projects = () => {
                 ))}
               </div>
               <div className="flex w-full justify-between">
-                <a href={project.gitHubLink}>View on Github</a>
-                <a href={project.appLink}>Go to app </a>
+                <a href={project.gitHubLink}>{project.gitHubText}</a>
+                <a className="flex gap-1 items-center" href={project.appLink}>
+                  {project.appText}
+                  <img src={project.arrowRight} />{" "}
+                </a>
               </div>
               <div className="w-80 h-44" />
               <img src={project.img} className="absolute -bottom-7" />

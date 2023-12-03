@@ -1,5 +1,6 @@
 import project1 from "./assets/projects/project1.png";
 import project2 from "./assets/projects/project2.png";
+import arrowRight from "./assets/projects/arrow-right.svg";
 import react from "./assets/skills/react.png";
 import js from "./assets/skills/js.png";
 import redux from "./assets/skills/redux.png";
@@ -20,7 +21,8 @@ export const languages = {
     code: "en",
     mainpage: {
       header: {
-        theme: "DARK MODE",
+        themeDark: "DARK MODE",
+        themeLight: "LIGHT MODE",
         language: { strong: "TÜRKÇE", span: "'YE GEÇ" },
       },
       content: {
@@ -37,6 +39,7 @@ export const languages = {
         },
       },
     },
+    skills: "Skills",
     profile: {
       header: "Profile",
       basicInfo: {
@@ -70,9 +73,12 @@ export const languages = {
           skills: ["react", "vercel", "axios", "router "],
           bgColor: "bg-blue-100",
           bgColorDark: "bg-[#2D3235]",
+          gitHubText: "View on Github",
           gitHubLink: "#",
+          appText: "Go to app",
           appLink: "#",
           img: project1,
+          arrowRight: arrowRight,
         },
 
         {
@@ -82,9 +88,12 @@ export const languages = {
           skills: ["react", "vercel", "axios", "router "],
           bgColor: "bg-blue-100",
           bgColorDark: "bg-[#2D3235]",
+          gitHubText: "View on Github",
           gitHubLink: "#",
+          appText: "Go to app",
           appLink: "#",
           img: project1,
+          arrowRight: arrowRight,
         },
 
         {
@@ -127,7 +136,8 @@ export const languages = {
     code: "tr",
     mainpage: {
       header: {
-        theme: "KARANLIK MOD",
+        themeDark: "KOYU MOD",
+        themeLight: "AÇIK MOD",
         language: { strong: "ENGLISH" },
       },
       content: {
@@ -144,7 +154,7 @@ export const languages = {
         },
       },
     },
-
+    skills: "Beceriler",
     profile: {
       header: "Profil",
       basicInfo: {
@@ -176,9 +186,12 @@ export const languages = {
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
           skills: ["react", "vercel", "axios", "router "],
           bgColor: "bg-blue-100",
+          gitHubText: "Github'da göster",
           gitHubLink: "#",
+          appText: "Uygulamaya git",
           appLink: "#",
           img: project1,
+          arrowRight: arrowRight,
         },
         {
           header: "Sıkıldınız mı?",
@@ -186,9 +199,12 @@ export const languages = {
             "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
           skills: ["react", "redux", "axios", "router", "vercel"],
           bgColor: "bg-green-100",
+          gitHubText: "Github'da göster",
           gitHubLink: "#",
+          appText: "Uygulamaya git",
           appLink: "#",
           img: project2,
+          arrowRight: arrowRight,
         },
       ],
     },
