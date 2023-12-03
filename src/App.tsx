@@ -2,7 +2,7 @@ import "./App.css";
 import Main from "./components/Main";
 import Profile from "./components/Profile";
 import Skills from "./components/Skills";
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import axios from "axios";
 import { languages } from "./data";
 import Projects from "./components/Projects";

@@ -22,7 +22,7 @@ const LanguageContextProvider = ({ children }: any) => {
         return state;
     }
   }
-  const [language, dispatchLanguage] = useReducer(languageReducer);
+  const [language, dispatchLanguage] = useReducer(languageReducer, null);
 
   return (
     <LanguageContextObject.Provider value={{ language, dispatchLanguage }}>
