@@ -23,10 +23,11 @@ function App() {
         const localLanguage = localStorage.getItem("language");
         const browserLanguage = navigator.language.includes("en") ? "en" : "tr";
         const initialData = localLanguage ? localLanguage : browserLanguage;
+        const initialLanguage = Object.values(response.data).filter(
+          (lang: any) => lang.code == initialData
+        )[0];
 
-        console.log("local", localLanguage);
-        console.log("browser", browserLanguage);
-        dispatchLanguage({ type: initialData, payload: response.data.english });
+        dispatchLanguage({ type: "initialize", payload: initialLanguage });
       })
       .catch(function (error) {
         console.log(error);
