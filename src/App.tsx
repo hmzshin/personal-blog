@@ -18,7 +18,7 @@ function App() {
 
   useEffect(() => {
     const localLanguage = localStorage.getItem("language");
-    const browserLanguage = navigator.language.includes("en") ? "en" : "tr";
+    const browserLanguage = navigator.language.split("-")[0];
     const initialData = localLanguage ? localLanguage : browserLanguage;
     const initialLanguage = Object.values(languages).filter(
       (lang: any) => lang.code == initialData
