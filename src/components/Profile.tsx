@@ -8,12 +8,14 @@ const Profile = () => {
   return (
     <section
       id="profile"
-      className="bg-zinc-100 dark:bg-[#2A262B] py-10 relative overflow-x-hidden overflow-y-visible "
+      className="bg-zinc-100 dark:bg-[#2A262B] py-10 relative  "
     >
       <div
         id="decoration"
-        className="w-[121px] h-[121px] rounded-full border-[21px] border-pink-600 absolute -top-9 -right-12 xl:flex xl:justify-center"
-      />
+        className="w-[70px] h-[121px] absolute -top-9 right-0  overflow-x-hidden overflow-y-visible"
+      >
+        <div className="w-[121px] h-[121px] rounded-full border-[21px] border-pink-600 " />
+      </div>
       <div className=" flex flex-col  items-center justify-center px-[10%] ] gap-5 xl:w-[1280px] xl:px-[120px] xl:m-auto">
         <h3 className=" text-black dark:text-white text-4xl font-medium font-['Inter'] tracking-[0.36px]">
           {header}
