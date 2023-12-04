@@ -19,6 +19,7 @@ export const languages = {
   ],
   english: {
     code: "en",
+    changeLanguage: "Language succesfully changed",
     mainpage: {
       header: {
         themeDark: "DARK MODE",
@@ -125,6 +126,7 @@ export const languages = {
   },
   turkish: {
     code: "tr",
+    changeLanguage: "Dil başarıyla değiştirildi.",
     mainpage: {
       header: {
         themeDark: "KOYU MOD",
@@ -228,6 +230,7 @@ export const languages = {
   },
   spanish: {
     code: "es",
+    changeLanguage: "Lengua modificada con éxito",
     mainpage: {
       header: {
         themeDark: "MODO OSCURO",

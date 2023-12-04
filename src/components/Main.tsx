@@ -1,7 +1,6 @@
 import { useContext } from "react";
 import { LanguageContextObject } from "../context/LanguageContext";
 import { ThemeContextObject } from "../context/ThemeContext";
-import { toast } from "react-toastify";
 import linkedin from "../assets/main/LinkedIn.svg";
 import linkedinDark from "../assets/main/LinkedIn-dark.png";
 import github from "../assets/main/github.svg";
@@ -28,7 +27,6 @@ const Main = () => {
   }
   function selectLanguage(value: any) {
     dispatchLanguage({ type: value });
-    toast("language is succesfully changed");
   }
 
   return (
