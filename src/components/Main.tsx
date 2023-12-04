@@ -100,11 +100,16 @@ const Main = () => {
               {content.p2}
             </p>
             <div className="flex gap-5">
-              <img
-                src={theme == "dark" ? linkedinDark : linkedin}
-                alt="linkedin"
-              />
-              <img src={theme == "dark" ? githubDark : github} alt="github" />
+              <a href="https://www.linkedin.com/in/hamza-%C5%9Fahin-4a351b142/">
+                <img
+                  src={theme == "dark" ? linkedinDark : linkedin}
+                  alt="linkedin"
+                />
+              </a>
+              <a href="https://github.com/hmzshin">
+                {" "}
+                <img src={theme == "dark" ? githubDark : github} alt="github" />
+              </a>
             </div>
             <p className=" text-black  dark:text-white  text-base font-normal font-['Inter'] leading-loose tracking-wide">
               {content.p3.p1}{" "}
@@ -113,7 +118,9 @@ const Main = () => {
               <span className=" text-rose-700">{content.p3.span2} </span>
               {content.p3.p3} <br />
               {content.p3.p4}{" "}
-              <span className=" text-rose-700">{content.p3.span3}</span>
+              <a className=" text-rose-700" href={`mailto:${content.p3.span3}`}>
+                {content.p3.span3}
+              </a>
             </p>
           </section>
           <section className="flex items-center">
