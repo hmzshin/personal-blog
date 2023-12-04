@@ -10,6 +10,11 @@ const Skills = () => {
       id="skills"
       className=" flex flex-col justify-center items-center gap-5 md:gap-10 py-10 md:py-20  dark:bg-zinc-700 relative"
     >
+      <div
+        id="decoration"
+        className="w-[121px] h-[121px] rounded-full border-[21px]   border-[#D9D9D9]  dark:border-[#525252] absolute -top-16 -left-16 md:left-[70%]  "
+      />
+
       <h3 className="text-gray-950 dark:text-zinc-100 text-3xl md:text-4xl font-medium font-['Inter'] tracking-[0.48px]">
         {language.skills}
       </h3>

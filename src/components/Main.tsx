@@ -1,16 +1,23 @@
 import { useContext } from "react";
 import { LanguageContextObject } from "../context/LanguageContext";
+import { ThemeContextObject } from "../context/ThemeContext";
+import { toast } from "react-toastify";
 import linkedin from "../assets/main/LinkedIn.svg";
 import linkedinDark from "../assets/main/LinkedIn-dark.png";
 import github from "../assets/main/github.svg";
 import githubDark from "../assets/main/github-dark.png";
 import profilImg from "../assets/main/mainpage-profile.svg";
-import { ThemeContextObject } from "../context/ThemeContext";
 
 const Main = () => {
   const { language, dispatchLanguage }: any = useContext(LanguageContextObject);
   const { theme, dispatchTheme }: any = useContext(ThemeContextObject);
   const { header, content } = language.mainpage;
+
+  const options = [
+    { name: "english", value: "en" },
+    { name: "türkçe", value: "tr" },
+    { name: "español", value: "es" },
+  ];
 
   function toggleTheme() {
     if (theme == "light") {
@@ -19,12 +26,9 @@ const Main = () => {
       dispatchTheme({ type: "SET_LIGHT_MODE" });
     }
   }
-  function toggleLanguage() {
-    if (language.code == "en") {
-      dispatchLanguage({ type: "tr" });
-    } else {
-      dispatchLanguage({ type: "en" });
-    }
+  function selectLanguage(value: any) {
+    dispatchLanguage({ type: value });
+    toast("language is succesfully changed");
   }
 
   return (
@@ -64,19 +68,18 @@ const Main = () => {
           </label>
 
           <label>
-            <span className="text-pink-600 text-base font-bold font-['Inter'] tracking-wider">
-              {header.language.strong}
-            </span>
-            {/* <span className="text-neutral-500 text-base font-bold font-['Inter'] tracking-wider">
-              {header.language.span}
-            </span> */}
-
-            <input
+            <select
               name="language"
-              type="checkbox"
-              className="invisible"
-              onClick={toggleLanguage}
-            />
+              onChange={(e) => selectLanguage(e.target.value)}
+              value={language.code}
+              className="bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-auto p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500    text-pink-600 text-base font-bold font-['Inter'] tracking-wider"
+            >
+              {options.map((option: any, index: number) => (
+                <option key={index} value={option.value}>
+                  {option.name.toUpperCase()}
+                </option>
+              ))}
+            </select>
           </label>
         </div>
         <div className="flex justify-center flex-wrap md:flex-nowrap py-10 px-[10%] gap-10">
@@ -99,11 +102,16 @@ const Main = () => {
               {content.p2}
             </p>
             <div className="flex gap-5">
-              <img
-                src={theme == "dark" ? linkedinDark : linkedin}
-                alt="linkedin"
-              />
-              <img src={theme == "dark" ? githubDark : github} alt="github" />
+              <a href="https://www.linkedin.com/in/hamza-%C5%9Fahin-4a351b142/">
+                <img
+                  src={theme == "dark" ? linkedinDark : linkedin}
+                  alt="linkedin"
+                />
+              </a>
+              <a href="https://github.com/hmzshin">
+                {" "}
+                <img src={theme == "dark" ? githubDark : github} alt="github" />
+              </a>
             </div>
             <p className=" text-black  dark:text-white  text-base font-normal font-['Inter'] leading-loose tracking-wide">
               {content.p3.p1}{" "}
@@ -112,7 +120,9 @@ const Main = () => {
               <span className=" text-rose-700">{content.p3.span2} </span>
               {content.p3.p3} <br />
               {content.p3.p4}{" "}
-              <span className=" text-rose-700">{content.p3.span3}</span>
+              <a className=" text-rose-700" href={`mailto:${content.p3.span3}`}>
+                {content.p3.span3}
+              </a>
             </p>
           </section>
           <section className="flex items-center">

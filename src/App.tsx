@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import { DataContextObject } from "./context/DataContext";
 import { LanguageContextObject } from "./context/LanguageContext";
 import { ThemeContextObject } from "./context/ThemeContext";
+import { toast } from "react-toastify";
 
 function App() {
   const { dispatchData }: any = useContext(DataContextObject);
@@ -17,8 +18,9 @@ function App() {
   const { dispatchTheme }: any = useContext(ThemeContextObject);
 
   useEffect(() => {
+    const loading = toast.loading("Please wait...");
     const localLanguage = localStorage.getItem("language");
-    const browserLanguage = navigator.language.includes("en") ? "en" : "tr";
+    const browserLanguage = navigator.language.split("-")[0];
     const initialData = localLanguage ? localLanguage : browserLanguage;
     const initialLanguage = Object.values(languages).filter(
       (lang: any) => lang.code == initialData
@@ -32,8 +34,21 @@ function App() {
           type: "INITIALIZE_LANGUAGE",
           payload: initialLanguage,
         });
+        toast.update(loading, {
+          render: "Page loaded",
+          type: "success",
+          isLoading: false,
+          autoClose: 300,
+        });
       })
       .catch(function (error) {
+        toast.update(loading, {
+          render: "Can not reach page",
+          type: "error",
+          isLoading: false,
+          autoClose: 300,
+        });
+
         console.log(error);
       });
   }, []);
@@ -44,8 +59,6 @@ function App() {
       "(prefers-color-scheme: dark)"
     ).matches;
 
-    console.log("local theme>", localTheme);
-    console.log("browser theme>", browserTheme);
     if ((localTheme && localTheme == "dark") || (!localTheme && browserTheme)) {
       document.documentElement.classList.add("dark");
       dispatchTheme({ type: "INITIALIZE_THEME", payload: "dark" });
