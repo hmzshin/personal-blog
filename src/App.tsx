@@ -42,12 +42,14 @@ function App() {
         });
       })
       .catch(function (error) {
-        toast.update(loading, {
-          render: "Can not reach page",
-          type: "error",
-          isLoading: false,
-          autoClose: 300,
-        });
+        setTimeout(() => {
+          toast.update(loading, {
+            render: "Can not reach the page",
+            type: "error",
+            isLoading: false,
+            autoClose: 1000,
+          });
+        }, 1000);
 
         console.log(error);
       });
