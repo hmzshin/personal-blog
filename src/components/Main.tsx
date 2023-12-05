@@ -76,7 +76,7 @@ const Main = () => {
             </select>
           </label>
         </div>
-        <div className="flex justify-center  flex-wrap md:flex-nowrap py-10 xl:pb-32 px-[10%] xl:w-full  xl:justify-around gap-20 xl:gap-32">
+        <div className="flex justify-center  flex-wrap lg:flex-nowrap py-10 xl:pb-32 px-[10%] xl:w-full  xl:justify-around gap-20 xl:gap-32">
           <section
             id="content"
             className="flex flex-col items-center md:items-start justify-center  gap-5 relative"
