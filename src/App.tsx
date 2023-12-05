@@ -32,7 +32,7 @@ function App() {
         dispatchData({ type: "SET_DATA", payload: { ...response.data } });
         dispatchLanguage({
           type: "INITIALIZE_LANGUAGE",
-          payload: initialLanguage,
+          payload: initialLanguage ? initialLanguage : languages.english,
         });
         toast.update(loading, {
           render: "Page loaded",
