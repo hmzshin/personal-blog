@@ -36,10 +36,10 @@ const Main = () => {
     >
       <div
         id="decoration"
-        className="w-[217px] h-[40px] bg-pink-600 rounded-[20px] absolute bottom-3 -right-32 md:bottom-28 lg:bottom-16 "
+        className="w-[217px] h-[40px] bg-pink-600 rounded-[20px] absolute bottom-3 -right-32 md:bottom-28 xl:bottom-16 "
       />
-      <div className="flex flex-col items-center justify-center relative xl:w-[1280px] xl:m-auto ">
-        <div className="flex gap-8 mt-20 md:self-end md:pr-[10%]">
+      <div className="flex flex-col items-center justify-center relative">
+        <div className="flex gap-8 mt-14 md:self-end md:pr-[10%]">
           <label className="flex items-center gap-3 ">
             <div className="inline-block w-14 h-6  bg-pink-600 rounded-[100px] dark:bg-black relative customTransition ">
               <div className="w-4 h-4 bg-amber-200 rounded-full absolute top-1 right-1 dark:right-9 customTransition " />
@@ -49,7 +49,7 @@ const Main = () => {
               />
             </div>
 
-            <span className="text-neutral-500 text-base font-bold font-['Inter'] tracking-wider">
+            <span className="text-neutral-500 text-base font-bold font-sans tracking-wider">
               {theme == "dark" ? header.themeDark : header.themeLight}
             </span>
 
@@ -76,26 +76,26 @@ const Main = () => {
             </select>
           </label>
         </div>
-        <div className="flex justify-center flex-wrap md:flex-nowrap py-10 px-[10%] gap-10">
+        <div className="flex justify-center  flex-wrap md:flex-nowrap py-10 xl:pb-32 px-[10%] xl:w-full  xl:justify-around gap-20 xl:gap-32">
           <section
             id="content"
-            className="flex flex-col items-center md:items-start justify-center min-w-2/4 gap-5 relative"
+            className="flex flex-col items-center md:items-start justify-center  gap-5 relative"
           >
             <div
               id="decoration"
-              className="absolute top-[88px] -left-2 w-[100px] h-[25px] bg-pink-600 rounded z-[0] "
+              className="absolute top-[88px] -left-2 w-[100px] h-[25px] bg-pink-600 rounded z-[0] xl:top-[120px] "
             />
             <div
               id="decoration"
               className="absolute -top-[200px] left-60 w-28 h-28 bg-zinc-300 rounded-full"
             />
-            <p className="text-black dark:text-white text-2xl font-normal font-['Inter'] tracking-[3px] customTransition">
+            <p className="text-black dark:text-white text-3xl font-normal font-sans tracking-[3px] xl:text-5xl customTransition">
               {content.p1}
             </p>
-            <p className="  text-gray-950  dark:text-white  text-3xl font-medium font-['Inter'] leading-[64px] tracking-wide z-[1] customTransition">
+            <p className="  text-gray-950  dark:text-white  text-4xl xl:text-5xl xl:leading-[80px] font-medium font-sans leading-[64px] tracking-wide z-[1] customTransition">
               {content.p2}
             </p>
-            <div className="flex gap-5">
+            <div className="flex gap-5 xl:pt-10">
               <a href="https://www.linkedin.com/in/hamza-%C5%9Fahin-4a351b142/">
                 <img
                   src={theme == "dark" ? linkedinDark : linkedin}
@@ -107,7 +107,7 @@ const Main = () => {
                 <img src={theme == "dark" ? githubDark : github} alt="github" />
               </a>
             </div>
-            <p className=" text-black  dark:text-white  text-base font-normal font-['Inter'] leading-loose tracking-wide customTransition">
+            <p className=" text-black  dark:text-white  text-base xl:text-xl font-normal font-sans leading-loose tracking-wide customTransition">
               {content.p3.p1}{" "}
               <span className=" text-rose-700">{content.p3.span1} </span>
               {content.p3.p2}{" "}
@@ -120,8 +120,8 @@ const Main = () => {
             </p>
           </section>
           <section className="flex items-center">
-            <div className="w-[195px] h-[195px] bg-pink-600 rounded-[16px] relative">
-              <img className="absolute top-2 left-2" src={profilImg} />
+            <div className="w-[300px] h-[300px] rounded-[20px] xl:w-[400px] xl:h-[400px] xl:rounded-[30px]  shadow-[-15px_-15px_0px_0px] shadow-[#E92577] relative">
+              <img className="w-full h-full" src={profilImg} />
             </div>
           </section>
         </div>
