@@ -41,17 +41,13 @@ const Main = () => {
       <div className="flex flex-col items-center justify-center relative xl:w-[1280px] xl:m-auto ">
         <div className="flex gap-8 mt-20 md:self-end md:pr-[10%]">
           <label className="flex items-center gap-3 ">
-            {theme == "light" ? (
-              <div className="inline-block w-[55px] h-6  bg-pink-600  rounded-[100px] relative customTransition ">
-                <div className="w-[15px] h-4 bg-amber-200 rounded-full absolute top-1 right-1 customTransition " />
-                <div className="w-[15px] h-4 rounded-full absolute top-1 left-[10px] transition-all" />
-              </div>
-            ) : (
-              <div className="inline-block w-[55px] h-6  rounded-[100px] bg-black relative customTransition ">
-                <div className="w-[15px] h-4  bg-amber-200 rounded-full absolute top-1 left-1 " />
-                <div className="w-[15px] h-4  rounded-full bg-black absolute top-1 left-[10px] customTransition  " />
-              </div>
-            )}
+            <div className="inline-block w-14 h-6  bg-pink-600 rounded-[100px] dark:bg-black relative customTransition ">
+              <div className="w-4 h-4 bg-amber-200 rounded-full absolute top-1 right-1 dark:right-9 customTransition " />
+              <div
+                className="w-1 h-1 dark:w-[14px] dark:h-[14px] rounded-full  bg-amber-200 absolute  
+               top-[10px] right-1 dark:top-1 dark:right-8 dark:bg-black customTransition"
+              />
+            </div>
 
             <span className="text-neutral-500 text-base font-bold font-['Inter'] tracking-wider">
               {theme == "dark" ? header.themeDark : header.themeLight}
