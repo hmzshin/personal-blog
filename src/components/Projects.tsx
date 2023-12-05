@@ -8,9 +8,12 @@ const Projects = () => {
   const { header, body } = language.projects;
 
   return (
-    <section id="projects" className=" dark:bg-[#484148] py-16 ">
+    <section
+      id="projects"
+      className=" dark:bg-[#484148] py-16 customTransition"
+    >
       <div className="xl:w-[1280px] xl:m-auto ">
-        <h3 className="text-black dark:text-white text-[29px] font-bold font-['PlayfairDisplay'] tracking-wider text-center">
+        <h3 className="text-black dark:text-white text-[29px] font-bold font-['PlayfairDisplay'] tracking-wider text-center customTransition">
           {header}
         </h3>
         <div className="flex flex-wrap justify-center gap-20 mt-10">
@@ -19,7 +22,7 @@ const Projects = () => {
               key={index}
               className={`text-black dark:text-white w-80  flex flex-col items-center ${
                 theme == "dark" ? project.bgColorDark : project.bgColor
-              } rounded-xl gap-5 px-5 py-5 relative`}
+              } rounded-xl gap-5 px-5 py-5 relative customTransition`}
             >
               <h4 className=" text-[29px] font-bold font-['PlayfairDisplay'] tracking-wider">
                 {project.header}
@@ -30,7 +33,7 @@ const Projects = () => {
               <div className="flex flex-wrap gap-2">
                 {project.skills.map((skill: any, index: number) => (
                   <p
-                    className="w-[81px] h-8 py-1 bg-white dark:bg-[#525252] rounded-[76px]  text-xl text-center font-bold font-['PlayfairDisplay'] leading-none tracking-wide "
+                    className="w-[81px] h-8 py-1 bg-white dark:bg-[#525252] rounded-[76px]  text-xl text-center font-bold font-['PlayfairDisplay'] leading-none tracking-wide  customTransition"
                     key={index}
                   >
                     {skill}

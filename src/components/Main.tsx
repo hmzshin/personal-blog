@@ -32,7 +32,7 @@ const Main = () => {
   return (
     <section
       id="mainpage"
-      className="bg-zinc-100 dark:bg-zinc-800 relative overflow-x-hidden"
+      className="bg-zinc-100 dark:bg-zinc-800 relative overflow-x-hidden customTransition"
     >
       <div
         id="decoration"
@@ -42,14 +42,14 @@ const Main = () => {
         <div className="flex gap-8 mt-20 md:self-end md:pr-[10%]">
           <label className="flex items-center gap-3 ">
             {theme == "light" ? (
-              <div className="inline-block w-[55px] h-6  bg-pink-600  rounded-[100px] relative transition-all duration-300 ease-linear ">
-                <div className="w-[15px] h-4 bg-amber-200 rounded-full absolute top-1 right-1 transition-all duration-300 ease-in-out " />
+              <div className="inline-block w-[55px] h-6  bg-pink-600  rounded-[100px] relative customTransition ">
+                <div className="w-[15px] h-4 bg-amber-200 rounded-full absolute top-1 right-1 customTransition " />
                 <div className="w-[15px] h-4 rounded-full absolute top-1 left-[10px] transition-all" />
               </div>
             ) : (
-              <div className="inline-block w-[55px] h-6  rounded-[100px] bg-black relative transition-all duration-300 ease-in-out ">
+              <div className="inline-block w-[55px] h-6  rounded-[100px] bg-black relative customTransition ">
                 <div className="w-[15px] h-4  bg-amber-200 rounded-full absolute top-1 left-1 " />
-                <div className="w-[15px] h-4  rounded-full bg-black absolute top-1 left-[10px] transition-all duration-300 ease-linear  " />
+                <div className="w-[15px] h-4  rounded-full bg-black absolute top-1 left-[10px] customTransition  " />
               </div>
             )}
 
@@ -70,7 +70,7 @@ const Main = () => {
               name="language"
               onChange={(e) => selectLanguage(e.target.value)}
               value={language.code}
-              className="bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-auto p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500    text-pink-600 text-base font-bold font-['Inter'] tracking-wider"
+              className="bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-auto p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500    text-pink-600 text-base font-bold font-['Inter'] tracking-wider customTransition"
             >
               {options.map((option: any, index: number) => (
                 <option key={index} value={option.value}>
@@ -93,10 +93,10 @@ const Main = () => {
               id="decoration"
               className="absolute -top-[200px] left-60 w-28 h-28 bg-zinc-300 rounded-full"
             />
-            <p className="text-black dark:text-white text-2xl font-normal font-['Inter'] tracking-[3px]">
+            <p className="text-black dark:text-white text-2xl font-normal font-['Inter'] tracking-[3px] customTransition">
               {content.p1}
             </p>
-            <p className="  text-gray-950  dark:text-white  text-3xl font-medium font-['Inter'] leading-[64px] tracking-wide z-[1]">
+            <p className="  text-gray-950  dark:text-white  text-3xl font-medium font-['Inter'] leading-[64px] tracking-wide z-[1] customTransition">
               {content.p2}
             </p>
             <div className="flex gap-5">
@@ -111,7 +111,7 @@ const Main = () => {
                 <img src={theme == "dark" ? githubDark : github} alt="github" />
               </a>
             </div>
-            <p className=" text-black  dark:text-white  text-base font-normal font-['Inter'] leading-loose tracking-wide">
+            <p className=" text-black  dark:text-white  text-base font-normal font-['Inter'] leading-loose tracking-wide customTransition">
               {content.p3.p1}{" "}
               <span className=" text-rose-700">{content.p3.span1} </span>
               {content.p3.p2}{" "}
