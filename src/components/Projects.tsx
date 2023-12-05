@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className=" dark:bg-[#484148] py-16 customTransition"
+      className=" dark:bg-[#484148] py-20 customTransition"
     >
       <div className="xl:w-[1280px] xl:m-auto ">
         <h3 className="text-black dark:text-white text-2xl xl:text-4xl font-bold font-playfair tracking-wider text-center customTransition">
@@ -47,10 +47,10 @@ const Projects = () => {
                   <img src={project.arrowRight} />{" "}
                 </a>
               </div>
-              <div className="w-80 xl:w-[500px] xl:px-10 h-44" />
+              <div className="w-[280px] h-44  xl:w-[500px] xl:h-52 self-center" />
               <img
                 src={project.img}
-                className="absolute -bottom-7 w-[280px] xl:w-[420px] "
+                className="absolute left-0 -bottom-7 w-80 xl:w-[500px] xl:-bottom-10 "
               />
             </section>
           ))}
