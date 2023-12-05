@@ -1,12 +1,12 @@
 import project1 from "./assets/projects/project1.png";
 import project2 from "./assets/projects/project2.png";
 import arrowRight from "./assets/projects/arrow-right.svg";
-import react from "./assets/skills/react.png";
-import js from "./assets/skills/js.png";
+import react from "./assets/skills/react-logo.svg";
+import js from "./assets/skills/js-logo 1.svg";
 import redux from "./assets/skills/redux.png";
-import node from "./assets/skills/node.png";
-import vscode from "./assets/skills/vscode.png";
-import figma from "./assets/skills/figma.png";
+import node from "./assets/skills/node-logo 1.svg";
+import vscode from "./assets/skills/vscode-logo.svg";
+import figma from "./assets/skills/figma-logo 1.svg";
 
 export const languages = {
   skills: [
