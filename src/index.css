@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Playfair+Display&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,3 +6,7 @@
 /* * {
   border: 1px solid lime;
 } */
+
+.customTransition {
+  @apply transition-all duration-300 ease-in-out;
+}

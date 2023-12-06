@@ -10,6 +10,7 @@ import Footer from "./components/Footer";
 import { DataContextObject } from "./context/DataContext";
 import { LanguageContextObject } from "./context/LanguageContext";
 import { ThemeContextObject } from "./context/ThemeContext";
+import { toast } from "react-toastify";
 
 function App() {
   const { dispatchData }: any = useContext(DataContextObject);
@@ -17,8 +18,9 @@ function App() {
   const { dispatchTheme }: any = useContext(ThemeContextObject);
 
   useEffect(() => {
+    const loading = toast.loading("Please wait...");
     const localLanguage = localStorage.getItem("language");
-    const browserLanguage = navigator.language.includes("en") ? "en" : "tr";
+    const browserLanguage = navigator.language.split("-")[0];
     const initialData = localLanguage ? localLanguage : browserLanguage;
     const initialLanguage = Object.values(languages).filter(
       (lang: any) => lang.code == initialData
@@ -30,10 +32,25 @@ function App() {
         dispatchData({ type: "SET_DATA", payload: { ...response.data } });
         dispatchLanguage({
           type: "INITIALIZE_LANGUAGE",
-          payload: initialLanguage,
+          payload: initialLanguage ? initialLanguage : response.data.english,
+        });
+        toast.update(loading, {
+          render: "Page loaded",
+          type: "success",
+          isLoading: false,
+          autoClose: 300,
         });
       })
       .catch(function (error) {
+        setTimeout(() => {
+          toast.update(loading, {
+            render: "Can not reach the page",
+            type: "error",
+            isLoading: false,
+            autoClose: 1000,
+          });
+        }, 1000);
+
         console.log(error);
       });
   }, []);
@@ -44,8 +61,6 @@ function App() {
       "(prefers-color-scheme: dark)"
     ).matches;
 
-    console.log("local theme>", localTheme);
-    console.log("browser theme>", browserTheme);
     if ((localTheme && localTheme == "dark") || (!localTheme && browserTheme)) {
       document.documentElement.classList.add("dark");
       dispatchTheme({ type: "INITIALIZE_THEME", payload: "dark" });
