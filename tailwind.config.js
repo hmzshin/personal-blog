@@ -6,7 +6,13 @@ export default {
       sans: ["Inter"],
       playfair: ["Playfair Display"],
     },
-    extend: {},
+    extend: {
+      colors: {
+        grayishYellow: "#dad8d0",
+        strongRed: "#d32335",
+        darkCyan: "#002c32",
+      },
+    },
   },
   plugins: [],
   darkMode: "class",

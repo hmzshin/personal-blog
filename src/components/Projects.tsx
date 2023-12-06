@@ -10,7 +10,7 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className=" dark:bg-[#484148] py-20 customTransition"
+      className="bg-grayishYellow dark:bg-[#484148] py-20 customTransition"
     >
       <div className="xl:w-[1280px] xl:m-auto ">
         <h3 className="text-black dark:text-white text-2xl xl:text-4xl font-bold font-playfair tracking-wider text-center customTransition">
@@ -22,7 +22,7 @@ const Projects = () => {
               key={index}
               className={`text-black dark:text-white w-80  flex flex-col items-start ${
                 theme == "dark" ? project.bgColorDark : project.bgColor
-              } rounded-xl gap-5 px-5 py-5 xl:w-[500px] xl:px-10 xl:py-10 xl:gap-10 relative customTransition`}
+              } rounded-xl gap-5 px-5 py-5 xl:w-[500px] xl:px-10 xl:py-10 xl:gap-10 shadow-2xl relative customTransition`}
             >
               <h4 className=" text-[29px] xl:text-4xl font-bold font-playfair tracking-wider">
                 {project.header}

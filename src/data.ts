@@ -109,7 +109,7 @@ export const languages = {
         {
           page: "Personal Blog",
           url: "https://hmzshin.github.io/personal-blog",
-          color: "text-gray-950",
+          color: "text-darkCyan",
         },
         {
           page: "Linkedin",
@@ -213,7 +213,7 @@ export const languages = {
         {
           page: "Personal Blog",
           url: "https://hmzshin.github.io/personal-blog",
-          color: "text-gray-950",
+          color: "text-darkCyan",
         },
         {
           page: "Linkedin",
@@ -317,7 +317,7 @@ export const languages = {
         {
           page: "Blog personal",
           url: "https://hmzshin.github.io/personal-blog",
-          color: "text-gray-950",
+          color: "text-darkCyan",
         },
         {
           page: "Linkedin",

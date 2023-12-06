@@ -32,16 +32,16 @@ const Main = () => {
   return (
     <section
       id="mainpage"
-      className="bg-zinc-100 dark:bg-zinc-800 relative overflow-x-hidden customTransition"
+      className="bg-grayishYellow dark:bg-zinc-800 relative overflow-x-hidden customTransition"
     >
       <div
         id="decoration"
-        className="w-[217px] h-[40px] bg-pink-600 rounded-[20px] absolute bottom-3 -right-32 md:bottom-28 xl:bottom-16 "
+        className="w-[217px] h-[40px] bg-strongRed rounded-[20px] absolute bottom-3 -right-32 md:bottom-28 xl:bottom-16 "
       />
       <div className="flex flex-col items-center justify-center relative">
         <div className="flex gap-8 mt-14 md:self-end md:pr-[10%]">
           <label className="flex items-center gap-3 ">
-            <div className="inline-block w-14 h-6  bg-pink-600 rounded-[100px] dark:bg-black relative customTransition ">
+            <div className="inline-block w-14 h-6  bg-strongRed rounded-[100px] dark:bg-black relative customTransition ">
               <div className="w-4 h-4 bg-amber-200 rounded-full absolute top-1 right-1 dark:right-9 customTransition " />
               <div
                 className="w-1 h-1 dark:w-[14px] dark:h-[14px] rounded-full  bg-amber-200 absolute  
@@ -49,7 +49,7 @@ const Main = () => {
               />
             </div>
 
-            <span className="text-neutral-500 text-base font-bold font-sans tracking-wider">
+            <span className="text-darkCyan dark:text-zinc-300 text-base font-bold font-sans tracking-wider">
               {theme == "dark" ? header.themeDark : header.themeLight}
             </span>
 
@@ -66,7 +66,7 @@ const Main = () => {
               name="language"
               onChange={(e) => selectLanguage(e.target.value)}
               value={language.code}
-              className="bg-zinc-100 rounded-lg block p-2.5 outline-none dark:bg-zinc-800 text-pink-600 text-base font-bold font-sans text-left tracking-wider customTransition"
+              className="bg-grayishYellow rounded-lg block p-2.5 outline-none dark:bg-zinc-800 text-strongRed text-base font-bold font-sans text-left tracking-wider customTransition"
             >
               {options.map((option: any, index: number) => (
                 <option key={index} value={option.value}>
@@ -83,16 +83,16 @@ const Main = () => {
           >
             <div
               id="decoration"
-              className="absolute top-[88px] -left-2 w-[100px] h-[25px] bg-pink-600 rounded z-[0] xl:top-[120px] "
+              className="absolute top-[88px] -left-2 w-[100px] h-[25px] bg-strongRed rounded z-[0] xl:top-[120px] "
             />
             <div
               id="decoration"
-              className="absolute -top-[200px] left-60 w-28 h-28 bg-zinc-300 rounded-full"
+              className="absolute -top-[200px] left-60 w-28 h-28 bg-darkCyan dark:bg-neutral-600 rounded-full customTransition"
             />
-            <p className="text-black dark:text-white text-3xl font-normal font-sans tracking-[3px] xl:text-5xl customTransition">
+            <p className="text-darkCyan dark:text-white text-3xl font-normal font-sans tracking-[3px] xl:text-5xl customTransition">
               {content.p1}
             </p>
-            <p className="  text-gray-950  dark:text-white  text-4xl xl:text-5xl xl:leading-[80px] font-medium font-sans leading-[64px] tracking-wide z-[1] customTransition">
+            <p className="  text-darkCyan  dark:text-white  text-4xl xl:text-5xl xl:leading-[80px] font-medium font-sans leading-[64px] tracking-wide z-[1] customTransition">
               {content.p2}
             </p>
             <div className="flex gap-5 xl:pt-10">
@@ -107,25 +107,32 @@ const Main = () => {
                 <img src={theme == "dark" ? githubDark : github} alt="github" />
               </a>
             </div>
-            <p className=" text-black  dark:text-white  text-base xl:text-xl font-normal font-sans leading-loose tracking-wide customTransition">
+            <p className=" text-darkCyan  dark:text-white  text-base xl:text-xl font-normal font-sans leading-loose tracking-wide customTransition">
               {content.p3.p1}{" "}
-              <span className=" text-rose-700">{content.p3.span1} </span>
+              <span className=" text-strongRed">{content.p3.span1} </span>
               {content.p3.p2}{" "}
-              <span className=" text-rose-700">{content.p3.span2} </span>
+              <span className=" text-strongRed">{content.p3.span2} </span>
               {content.p3.p3} <br />
               {content.p3.p4}{" "}
-              <a className=" text-rose-700" href={`mailto:${content.p3.span3}`}>
+              <a
+                className=" text-strongRed"
+                href={`mailto:${content.p3.span3}`}
+              >
                 {content.p3.span3}
               </a>
             </p>
           </section>
           <section className="flex items-center">
-            <div className="w-[300px] h-[300px] rounded-[20px] xl:w-[400px] xl:h-[400px] xl:rounded-[30px]  shadow-[-15px_-15px_0px_0px] shadow-[#E92577] relative">
+            <div className="w-[300px] h-[300px] rounded-[20px] xl:w-[400px] xl:h-[400px] xl:rounded-[30px]  shadow-[-15px_-15px_0px_0px] shadow-strongRed relative">
               <img className="w-full h-full" src={profilImg} />
             </div>
           </section>
         </div>
       </div>
+      <div
+        id="decoration"
+        className=" w-full h-[2px] bg-darkCyan dark:bg-transparent "
+      />
     </section>
   );
 };
