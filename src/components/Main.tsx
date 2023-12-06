@@ -66,7 +66,7 @@ const Main = () => {
               name="language"
               onChange={(e) => selectLanguage(e.target.value)}
               value={language.code}
-              className="bg-gray-50 border border-gray-300 rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-auto p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:focus:ring-blue-500 dark:focus:border-blue-500    text-pink-600 text-base font-bold font-['Inter'] tracking-wider customTransition"
+              className="bg-zinc-100 rounded-lg block p-2.5 outline-none dark:bg-zinc-800 text-pink-600 text-base font-bold font-sans text-left tracking-wider customTransition"
             >
               {options.map((option: any, index: number) => (
                 <option key={index} value={option.value}>
