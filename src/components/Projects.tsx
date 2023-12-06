@@ -16,7 +16,7 @@ const Projects = () => {
         <h3 className="text-black dark:text-white text-2xl xl:text-4xl font-bold font-playfair tracking-wider text-center customTransition">
           {header}
         </h3>
-        <div className="flex flex-wrap justify-center gap-20 mt-10">
+        <div className="flex flex-wrap justify-center gap-20 xl:gap-40 mt-10">
           {body.map((project: any, index: number) => (
             <section
               key={index}

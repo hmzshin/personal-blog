@@ -16,7 +16,7 @@ const Footer = () => {
             className="w-52 h-[18px] bg-[#82BBFF]  dark:bg-[#3968A0] rounded absolute top-10 left-28 -z-[1] customTransition"
           />
         </p>
-        <div className="md:flex md:flex-col whitespace-nowrap">
+        <div className="flex flex-wrap gap-3 md:flex md:flex-col whitespace-nowrap">
           {links.map((link: any, index: number) => (
             <a
               key={index}
