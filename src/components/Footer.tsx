@@ -7,9 +7,12 @@ const Footer = () => {
   const { theme }: any = useContext(ThemeContextObject);
   const { links, body } = language.footer;
   return (
-    <section id="footer" className=" dark:bg-[#484148] customTransition pb-36 ">
+    <section
+      id="footer"
+      className=" bg-grayishYellow dark:bg-[#484148] customTransition pb-36 "
+    >
       <div className="flex flex-col justify-around items-center gap-5 px-20 py-10 md:flex-row md:w-[800px] md:m-auto md:gap-10 lg:px-0 xl:gap-20   ">
-        <p className=" text-left md:text-center lg:text-right text-gray-950 dark:text-white text-[46px] lg:w-[600px]  font-medium font-sans leading-[63px] tracking-wide relative z-0 customTransition ">
+        <p className=" text-left md:text-center lg:text-right text-darkCyan dark:text-white text-[46px] lg:w-[600px]  font-medium font-sans leading-[63px] tracking-wide relative z-0 customTransition ">
           <span>{body}</span>
           <span
             id="decoration"
