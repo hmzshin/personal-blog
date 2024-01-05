@@ -1,5 +1,3 @@
-import project1 from "./assets/projects/project1.png";
-import project2 from "./assets/projects/project2.png";
 import arrowRight from "./assets/projects/arrow-right.svg";
 import react from "./assets/skills/react-logo.svg";
 import js from "./assets/skills/js-logo 1.svg";
@@ -7,6 +5,10 @@ import redux from "./assets/skills/redux.png";
 import node from "./assets/skills/node-logo 1.svg";
 import vscode from "./assets/skills/vscode-logo.svg";
 import figma from "./assets/skills/figma-logo 1.svg";
+import ts from "./assets/skills/Typescript.svg";
+import pizzaCover from "./assets/projects/pizza-cover.png";
+import blogCover from "./assets/projects/personalBlog-cover.png";
+import ecommerceCover from "./assets/projects/ecommerce-cover.png";
 
 export const languages = {
   skills: [
@@ -16,6 +18,7 @@ export const languages = {
     { svg: node, text: "NODE" },
     { svg: vscode, text: "VS CODE" },
     { svg: figma, text: "FIGMA" },
+    { svg: ts, text: "TS" },
   ],
   english: {
     code: "en",
@@ -57,8 +60,9 @@ export const languages = {
       aboutMe: {
         header: "About me",
         body: {
-          p1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
-          p2: "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam! ",
+          p1: "After my experience in the construction industry, I attended the 6-month Full-Stack Web Development course at Workitech in order to direct my career in the field of software development, which I have been interested in for a long time. During this time, I took an active role in more than 50 projects and increased my practical knowledge and experience in software development.",
+
+          p2: "My goal is to work in positions where I can continuously improve myself and adapt to innovations in the software development industry. I am looking for an environment where I can contribute by using my knowledge and competencies at the highest level",
         },
       },
     },
@@ -67,32 +71,66 @@ export const languages = {
       header: "Projects",
       body: [
         {
-          header: "Random Jokes",
+          header: "Order Pizza",
           explanation:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
-          skills: ["react", "vercel", "axios", "router "],
+            "In this project, I've developed the UI for a pizza website. The homepage features a button that directs you to place a pizza order. Upon clicking, it takes you to a page with a pizza order form where you can choose the size, thickness, and extra ingredients. As you make selections, the form instantly updates to show the price changes. I used HTML, CSS, JavaScript and React in the development of this project.",
+          skills: ["react", "yup", "react-router", "JavaScript"],
           bgColor: "bg-blue-100",
           bgColorDark: "bg-[#2D3235]",
           gitHubText: "View on Github",
-          gitHubLink: "#",
-          appText: "Go to app",
+          gitHubLink: "https://github.com/hmzshin/fsweb-s7-challenge-pizza",
+          appText: "",
           appLink: "#",
-          img: project1,
-          arrowRight: arrowRight,
+          img: pizzaCover,
+          arrowRight: "",
         },
 
         {
-          header: "Are you bored?",
+          header: "Personal Blog",
           explanation:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
-          skills: ["react", "redux", "axios", "router", "vercel"],
+            "This is a personal website project where I showcase my work. I've utilized HTML, CSS, TypeScript, Tailwind, and React for this project.",
+          skills: [
+            "react",
+            "react-context",
+            "github",
+            "axios",
+            "TypeScript",
+            "tailwind-css",
+          ],
           bgColor: "bg-[#D9F6F1]",
           bgColorDark: "bg-[#495351]",
           gitHubText: "View on Github",
-          gitHubLink: "#",
+          gitHubLink: "https://github.com/hmzshin/personal-blog",
           appText: "Go to app",
-          appLink: "#",
-          img: project2,
+          appLink: "https://hmzshin.github.io/personal-blog/",
+          img: blogCover,
+          arrowRight: arrowRight,
+        },
+        {
+          header: "Ecommerce Clone",
+          explanation:
+            "This project is an E-commerce website clone that allows users to view products, search among them, add items to their cart, adjust quantities, save shipping addresses and credit cards, and proceed with payments. To test the website, you can use the following login details: customer@commerce.com with the password: 123456.",
+          skills: [
+            "react",
+            "redux-toolkit",
+            "axios",
+            "router",
+            "vercel",
+            "typeScript",
+            "tailwind-css",
+            "toastify",
+            "swiper",
+            "slugify",
+            "infinite scroll component",
+            "react hook form",
+          ],
+          bgColor: "bg-[#D9F6F1]",
+          bgColorDark: "bg-[#495351]",
+          gitHubText: "View on Github",
+          gitHubLink: "https://github.com/hmzshin/ecommerce",
+          appText: "Go to app",
+          appLink: "https://ecommerce-sigma-ochre.vercel.app/",
+          img: ecommerceCover,
           arrowRight: arrowRight,
         },
       ],
@@ -109,7 +147,7 @@ export const languages = {
         {
           page: "Personal Blog",
           url: "https://hmzshin.github.io/personal-blog",
-          color: "text-gray-950",
+          color: "text-darkCyan",
         },
         {
           page: "Linkedin",
@@ -164,8 +202,8 @@ export const languages = {
       aboutMe: {
         header: "Hakkımda",
         body: {
-          p1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
-          p2: "Mnima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+          p1: "İnşaat sektöründeki deneyimimin ardından uzun zamandır ilgi duyduğum yazılım geliştirme alanında kariyerime yön vermek amacıyla Workitech'te 6 aylık Full-Stack Web Development kursuna katıldım. Bu süre zarfında 50'den fazla projede aktif rol alarak yazılım geliştirme konusunda pratik bilgi ve tecrübemi arttırdım.",
+          p2: "Hedefim kendimi sürekli geliştirebileceğim ve yazılım geliştirme sektöründeki yeniliklere adapte olabileceğim pozisyonlarda çalışmak. Bilgi birikimimi ve yetkinliklerimi en üst seviyede kullanarak katkı sağlayabileceğim bir ortam arıyorum",
         },
       },
     },
@@ -173,31 +211,58 @@ export const languages = {
       header: "Projeler",
       body: [
         {
-          header: "Rastgele Şakalar",
+          header: "Pizza Siparişi",
           explanation:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+            "Bu proje kapsamında bir pizza web sitesi için kullanıcı arayüzü geliştirdim. Ana sayfada, sizi bir pizza siparişi verme düğmesine yönlendiren bir düğme bulunuyor. Bu düğmeye tıkladığınızda, sizi pizza sipariş formunun bulunduğu bir sayfaya yönlendiriyor; burada boyut, kalınlık ve ekstra malzemeleri seçebiliyorsunuz. Seçimlerinizi yaparken, form anında fiyat değişikliklerini gösteriyor. Bu projenin geliştirilmesinde HTML, CSS, JavaScript ve React kullandım.",
           skills: ["react", "vercel", "axios", "router "],
           bgColor: "bg-blue-100",
           bgColorDark: "bg-[#2D3235]",
           gitHubText: "Github'da göster",
-          gitHubLink: "#",
-          appText: "Uygulamaya git",
+          gitHubLink: "https://github.com/hmzshin/fsweb-s7-challenge-pizza",
+          appText: "",
           appLink: "#",
-          img: project1,
-          arrowRight: arrowRight,
+          img: pizzaCover,
+          arrowRight: "",
         },
         {
-          header: "Sıkıldınız mı?",
+          header: "Kişisel Blog",
           explanation:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+            "Bu, çalışmalarımı sergilediğim kişisel bir web sitesi projesidir. Burada HTML, CSS, TypeScript, Tailwind ve React kullandım.",
           skills: ["react", "redux", "axios", "router", "vercel"],
           bgColor: "bg-green-100",
           bgColorDark: "bg-[#495351]",
           gitHubText: "Github'da göster",
-          gitHubLink: "#",
+          gitHubLink: "https://github.com/hmzshin/personal-blog",
           appText: "Uygulamaya git",
-          appLink: "#",
-          img: project2,
+          appLink: "https://hmzshin.github.io/personal-blog/",
+          img: blogCover,
+          arrowRight: arrowRight,
+        },
+        {
+          header: "E-Ticaret Klonu",
+          explanation:
+            "Bu proje, kullanıcıların ürünleri görüntüleyebildiği, arama yapabildiği, ürünleri sepetlerine ekleyebildiği, miktarları ayarlayabildiği, kargo adreslerini ve kredi kartlarını kaydedebildiği ve ödemeleri tamamlayabildiği bir e-ticaret web sitesi klonudur.Web sitesini denemek için aşağıdaki giriş bilgilerini kullanabilirsiniz: customer@commerce.com ve şifre: 123456.",
+          skills: [
+            "react",
+            "redux-toolkit",
+            "axios",
+            "router",
+            "vercel",
+            "typeScript",
+            "tailwind-css",
+            "toastify",
+            "swiper",
+            "slugify",
+            "infinite scroll component",
+            "react hook form",
+          ],
+          bgColor: "bg-[#D9F6F1]",
+          bgColorDark: "bg-[#495351]",
+          gitHubText: "Github'da göster",
+          gitHubLink: "https://github.com/hmzshin/ecommerce",
+          appText: "Uygulamaya git",
+          appLink: "https://ecommerce-sigma-ochre.vercel.app/",
+          img: ecommerceCover,
           arrowRight: arrowRight,
         },
       ],
@@ -213,7 +278,7 @@ export const languages = {
         {
           page: "Personal Blog",
           url: "https://hmzshin.github.io/personal-blog",
-          color: "text-gray-950",
+          color: "text-darkCyan",
         },
         {
           page: "Linkedin",
@@ -268,8 +333,8 @@ export const languages = {
       aboutMe: {
         header: "Sobre mí",
         body: {
-          p1: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
-          p2: "Mínima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+          p1: "Tras mi experiencia en el sector de la construcción, asistí al curso de 6 meses de Desarrollo Web Full-Stack en Workitech para orientar mi carrera en el campo del desarrollo de software, que me interesa desde hace mucho tiempo. Durante este tiempo, participé activamente en más de 50 proyectos y aumenté mis conocimientos prácticos y mi experiencia en el desarrollo de software. ",
+          p2: "Mi objetivo es trabajar en puestos en los que pueda mejorar continuamente y adaptarme a las innovaciones del sector del desarrollo de software. Busco un entorno en el que pueda contribuir utilizando mis conocimientos y competencias al más alto nivel.",
         },
       },
     },
@@ -277,31 +342,58 @@ export const languages = {
       header: "Proyectos",
       body: [
         {
-          header: "Chistes aleatorios",
+          header: "Pedido de Pizza",
           explanation:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia.",
+            "En este proyecto, he desarrollado la interfaz de usuario para un sitio web de pizzas. La página de inicio cuenta con un botón que te lleva a realizar un pedido de pizza. Al hacer clic, te lleva a una página con un formulario de pedido de pizza donde puedes elegir el tamaño, el grosor y los ingredientes extra. A medida que haces selecciones, el formulario se actualiza al instante para mostrar los cambios de precio. Utilicé HTML, CSS, JavaScript y React en el desarrollo de este proyecto.",
           skills: ["react", "vercel", "axios", "router"],
           bgColor: "bg-blue-100",
           bgColorDark: "bg-[#2D3235]",
           gitHubText: "Ver en Github",
-          gitHubLink: "#",
-          appText: "Ir a la aplicación",
+          gitHubLink: "https://github.com/hmzshin/fsweb-s7-challenge-pizza",
+          appText: "",
           appLink: "#",
-          img: project1,
-          arrowRight: arrowRight,
+          img: pizzaCover,
+          arrowRight: "",
         },
         {
-          header: "¿Estás aburrido?",
+          header: "Blog Personal",
           explanation:
-            "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam aut, odit laborum aliquam voluptatum nisi mollitia minima accusamus ratione soluta aperiam sit voluptate? Dicta quod deserunt quam temporibus cumque magnam!",
+            "Este es un proyecto de sitio web personal donde muestro mi trabajo. He utilizado HTML, CSS, TypeScript, Tailwind y React para este proyecto.",
           skills: ["react", "redux", "axios", "router", "vercel"],
           bgColor: "bg-[#D9F6F1]",
           bgColorDark: "bg-[#495351]",
           gitHubText: "Ver en Github",
-          gitHubLink: "#",
+          gitHubLink: "https://github.com/hmzshin/personal-blog",
           appText: "Ir a la aplicación",
-          appLink: "#",
-          img: project2,
+          appLink: "https://hmzshin.github.io/personal-blog/",
+          img: blogCover,
+          arrowRight: arrowRight,
+        },
+        {
+          header: "Clon de Comercio Electrónico",
+          explanation:
+            "Este proyecto es un clon de un sitio web de comercio electrónico que permite a los usuarios ver productos, buscar entre ellos, agregar artículos a su carrito, ajustar cantidades, guardar direcciones de envío y tarjetas de crédito, y proceder con los pagos.Para probar el sitio web, puedes usar los siguientes detalles de inicio de sesión: customer@commerce.com con la contraseña: 123456.",
+          skills: [
+            "react",
+            "redux-toolkit",
+            "axios",
+            "router",
+            "vercel",
+            "typeScript",
+            "tailwind-css",
+            "toastify",
+            "swiper",
+            "slugify",
+            "infinite scroll component",
+            "react hook form",
+          ],
+          bgColor: "bg-[#D9F6F1]",
+          bgColorDark: "bg-[#495351]",
+          gitHubText: "Ver en Github",
+          gitHubLink: "https://github.com/hmzshin/ecommerce",
+          appText: "Ir a la aplicación",
+          appLink: "https://ecommerce-sigma-ochre.vercel.app/",
+          img: ecommerceCover,
           arrowRight: arrowRight,
         },
       ],
@@ -317,7 +409,7 @@ export const languages = {
         {
           page: "Blog personal",
           url: "https://hmzshin.github.io/personal-blog",
-          color: "text-gray-950",
+          color: "text-darkCyan",
         },
         {
           page: "Linkedin",

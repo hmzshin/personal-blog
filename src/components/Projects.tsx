@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { LanguageContextObject } from "../context/LanguageContext";
 import { ThemeContextObject } from "../context/ThemeContext";
+import rectangle from "../assets/projects/rectangle.png";
 
 const Projects = () => {
   const { language }: any = useContext(LanguageContextObject);
@@ -10,30 +11,30 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className=" dark:bg-[#484148] py-20 customTransition"
+      className="bg-grayishYellow dark:bg-[#484148] py-20 customTransition"
     >
-      <div className="xl:w-[1280px] xl:m-auto ">
+      <div className="xl:px-[7%]">
         <h3 className="text-black dark:text-white text-2xl xl:text-4xl font-bold font-playfair tracking-wider text-center customTransition">
           {header}
         </h3>
-        <div className="flex flex-wrap justify-center gap-20 xl:gap-40 mt-10">
+        <div className="flex flex-wrap justify-center items-center gap-20 mt-10">
           {body.map((project: any, index: number) => (
             <section
               key={index}
-              className={`text-black dark:text-white w-80  flex flex-col items-start ${
+              className={`text-black dark:text-white w-80  flex flex-col items-start self-stretch ${
                 theme == "dark" ? project.bgColorDark : project.bgColor
-              } rounded-xl gap-5 px-5 py-5 xl:w-[500px] xl:px-10 xl:py-10 xl:gap-10 relative customTransition`}
+              } rounded-xl gap-5 px-5 py-5 xl:w-[450px] xl:px-10 xl:py-10 xl:gap-10 shadow-2xl relative customTransition`}
             >
               <h4 className=" text-[29px] xl:text-4xl font-bold font-playfair tracking-wider">
                 {project.header}
               </h4>
-              <p className="  text-base font-normal font-sans leading-normal">
+              <p className="text-base font-normal font-sans leading-normal">
                 {project.explanation}
               </p>
               <div className="flex flex-wrap gap-2 xl:w-72">
                 {project.skills.map((skill: any, index: number) => (
                   <p
-                    className="w-20 h-8 py-2 bg-white dark:bg-[#525252] rounded-[76px]  text-base text-center font-semibold font-playfair leading-none tracking-wide  customTransition"
+                    className="w-fit h-8 py-2 px-2 bg-white dark:bg-[#0c0a0a] rounded-[76px]  text-base text-center font-semibold font-playfair leading-none tracking-wide whitespace-nowrap  customTransition"
                     key={index}
                   >
                     {skill}
@@ -49,8 +50,12 @@ const Projects = () => {
               </div>
               <div className="w-[280px] h-44  xl:w-[500px] xl:h-52 self-center" />
               <img
+                src={rectangle}
+                className="absolute left-0 -bottom-7 w-80 xl:w-[500px] xl:-bottom-10 z-10 "
+              />
+              <img
                 src={project.img}
-                className="absolute left-0 -bottom-7 w-80 xl:w-[500px] xl:-bottom-10 "
+                className="absolute object-fill object-center w-[230px] h-[150px] left-[47px] xl:left-[68px]  xl:h-[200px] xl:w-[315px] bottom-[2px] z-0 "
               />
             </section>
           ))}
