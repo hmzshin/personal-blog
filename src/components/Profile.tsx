@@ -23,9 +23,9 @@ const Profile = () => {
         <div className="flex flex-col gap-10 lg:flex-row ">
           <div
             id="basicIno"
-            className="flex flex-col gap-5 p-10 items-center justify-center text-darkCyan font-semibold font-sans bg-zinc-100 dark:bg-neutral-600 rounded-xl shadow-[5px_5px_0px_0px] shadow-neutral-500 customTransition "
+            className="flex flex-col gap-5 p-10  items-center justify-start text-darkCyan font-semibold font-sans bg-zinc-100 dark:bg-neutral-600 rounded-xl shadow-[5px_5px_0px_0px] shadow-neutral-500 customTransition "
           >
-            <h4 className="text-strongRed text-2xl xl:text-3xl font-medium font-playfair self-start tracking-[0.24px]  ">
+            <h4 className="text-strongRed pt-10 text-2xl xl:text-3xl font-medium font-playfair self-start tracking-[0.24px]  ">
               {basicInfo.header}
             </h4>
             <div className="flex dark:text-white text-lg xl:text-xl font-semibold font-sans tracking-[0.18px] customTransition">
@@ -55,7 +55,7 @@ const Profile = () => {
                 className="absolute top-5 left-0 w-[70px] h-[18px] bg-blue-400 dark:bg-blue-500 rounded -z-[1] customTransition"
               />
             </h4>
-            <div className=" flex flex-col gap-10">
+            <div className=" flex flex-col gap-10 max-w-3xl">
               {Object.values(aboutMe.body).map((item: any, index: number) => (
                 <p
                   key={index}

@@ -5,7 +5,7 @@ import linkedin from "../assets/main/LinkedIn.svg";
 import linkedinDark from "../assets/main/LinkedIn-dark.png";
 import github from "../assets/main/github.svg";
 import githubDark from "../assets/main/github-dark.png";
-import profilImg from "../assets/main/mainpage-profile.svg";
+import profilImg from "../assets/main/profilPic.png";
 
 const Main = () => {
   const { language, dispatchLanguage }: any = useContext(LanguageContextObject);
@@ -123,8 +123,11 @@ const Main = () => {
             </p>
           </section>
           <section className="flex items-center">
-            <div className="w-[300px] h-[300px] rounded-[20px] xl:w-[400px] xl:h-[400px] xl:rounded-[30px]  shadow-[-15px_-15px_0px_0px] shadow-strongRed relative">
-              <img className="w-full h-full" src={profilImg} />
+            <div className="w-[300px] h-[300px] rounded-full xl:w-[450px] xl:h-[450px] shadow-[10px_10px_0px_0px] shadow-strongRed relative">
+              <img
+                className="w-full h-full rounded-full  object-cover object-top "
+                src={profilImg}
+              />
             </div>
           </section>
         </div>
