@@ -48,11 +48,11 @@ export const languages = {
       basicInfo: {
         header: "Basic Information",
         body: [
-          ["Birth Date", "10.06.1995"],
+          ["Birthday", "10.06.1995"],
           ["City of Residence", "Sivas"],
           [
             "Educational Status",
-            "Middle East Technical University, Civi Engineering Degree, 2019",
+            "Middle East Technical University, Civil Engineering Degree, 2019",
           ],
           ["Preferred Working Position", "Frontend, UI"],
         ],
@@ -73,8 +73,8 @@ export const languages = {
         {
           header: "Order Pizza",
           explanation:
-            "In this project, I've developed the UI for a pizza website. The homepage features a button that directs you to place a pizza order. Upon clicking, it takes you to a page with a pizza order form where you can choose the size, thickness, and extra ingredients. As you make selections, the form instantly updates to show the price changes. I used HTML, CSS, JavaScript and React in the development of this project.",
-          skills: ["react", "yup", "react-router", "JavaScript"],
+            "In this project, I've developed the UI for a pizza website. The homepage features a button that directs you to place a pizza order. Upon clicking, it takes you to a page with a pizza order form where you can choose the size, thickness, and extra ingredients. As you make selections, the form instantly updates to show the price changes.",
+          skills: ["react", "yup", "react-router", "javascript", "axios"],
           bgColor: "bg-blue-100",
           bgColorDark: "bg-[#2D3235]",
           gitHubText: "View on Github",
@@ -88,16 +88,18 @@ export const languages = {
         {
           header: "Personal Blog",
           explanation:
-            "This is a personal website project where I showcase my work. I've utilized HTML, CSS, TypeScript, Tailwind, and React for this project.",
+            "This is a personal website project where I showcase my work.",
           skills: [
             "react",
             "react-context",
             "github",
             "axios",
-            "TypeScript",
+            "typescript",
             "tailwind-css",
+            "vs-code",
+            "figma",
           ],
-          bgColor: "bg-[#D9F6F1]",
+          bgColor: "bg-green-100",
           bgColorDark: "bg-[#495351]",
           gitHubText: "View on Github",
           gitHubLink: "https://github.com/hmzshin/personal-blog",
@@ -121,8 +123,8 @@ export const languages = {
             "toastify",
             "swiper",
             "slugify",
-            "infinite scroll component",
-            "react hook form",
+            "figma",
+            "react-hook form",
           ],
           bgColor: "bg-[#D9F6F1]",
           bgColorDark: "bg-[#495351]",
@@ -172,13 +174,13 @@ export const languages = {
       },
       content: {
         p1: "Merhaba! 👋",
-        p2: "Ben Hamza. Tam yığın geliştiriciyim. Sağlam ve ölçeklenebilir ön uç ürünleri oluşturabilirim. Tanışalım!",
+        p2: "Ben Hamza. Web geliştirme uzmanıyım. Sağlam ve ölçeklenebilir önyüz ürünleri oluşturabilirim. Tanışalım!",
         p3: {
           p1: "Şu anda ",
           span1: "Freelancing",
           p2: " olarak",
           span2: "UX, UI, & Web Tasarım",
-          p3: "Projesi'nde bulunuyorum.",
+          p3: "Projesi'nde çalışıyorum.",
           p4: "Beni takımınıza davet edin =>",
           span3: "hamzasahin@outlook.com",
         },
@@ -196,7 +198,7 @@ export const languages = {
             "Eğitim Durumu",
             "Orta Doğu Teknik Üniversitesi, İnşaat Mühendisliği Lisans, 2019",
           ],
-          ["Tercih Edilen Çalışma Pozisyonu", "Ön Uç, UI"],
+          ["Tercih Edilen Çalışma Pozisyonu", "Önyüz,Kullanıcı Arayüzü "],
         ],
       },
       aboutMe: {
@@ -213,8 +215,8 @@ export const languages = {
         {
           header: "Pizza Siparişi",
           explanation:
-            "Bu proje kapsamında bir pizza web sitesi için kullanıcı arayüzü geliştirdim. Ana sayfada, sizi bir pizza siparişi verme düğmesine yönlendiren bir düğme bulunuyor. Bu düğmeye tıkladığınızda, sizi pizza sipariş formunun bulunduğu bir sayfaya yönlendiriyor; burada boyut, kalınlık ve ekstra malzemeleri seçebiliyorsunuz. Seçimlerinizi yaparken, form anında fiyat değişikliklerini gösteriyor. Bu projenin geliştirilmesinde HTML, CSS, JavaScript ve React kullandım.",
-          skills: ["react", "vercel", "axios", "router "],
+            "Bu proje kapsamında bir pizza web sitesi için kullanıcı arayüzü geliştirdim. Ana sayfada, sizi bir pizza siparişi verme düğmesine yönlendiren bir düğme bulunuyor. Bu düğmeye tıkladığınızda, sizi pizza sipariş formunun bulunduğu bir sayfaya yönlendiriyor; burada boyut, kalınlık ve ekstra malzemeleri seçebiliyorsunuz. Seçimlerinizi yaparken, form anında fiyat değişikliklerini gösteriyor.",
+          skills: ["react", "yup", "react-router", "javascript", "axios"],
           bgColor: "bg-blue-100",
           bgColorDark: "bg-[#2D3235]",
           gitHubText: "Github'da göster",
@@ -227,8 +229,17 @@ export const languages = {
         {
           header: "Kişisel Blog",
           explanation:
-            "Bu, çalışmalarımı sergilediğim kişisel bir web sitesi projesidir. Burada HTML, CSS, TypeScript, Tailwind ve React kullandım.",
-          skills: ["react", "redux", "axios", "router", "vercel"],
+            "Bu, çalışmalarımı sergilediğim kişisel bir web sitesi projesidir.",
+          skills: [
+            "react",
+            "react-context",
+            "github",
+            "axios",
+            "typescript",
+            "tailwind-css",
+            "vs-code",
+            "figma",
+          ],
           bgColor: "bg-green-100",
           bgColorDark: "bg-[#495351]",
           gitHubText: "Github'da göster",
@@ -253,8 +264,8 @@ export const languages = {
             "toastify",
             "swiper",
             "slugify",
-            "infinite scroll component",
-            "react hook form",
+            "figma",
+            "react-hook form",
           ],
           bgColor: "bg-[#D9F6F1]",
           bgColorDark: "bg-[#495351]",
@@ -344,8 +355,8 @@ export const languages = {
         {
           header: "Pedido de Pizza",
           explanation:
-            "En este proyecto, he desarrollado la interfaz de usuario para un sitio web de pizzas. La página de inicio cuenta con un botón que te lleva a realizar un pedido de pizza. Al hacer clic, te lleva a una página con un formulario de pedido de pizza donde puedes elegir el tamaño, el grosor y los ingredientes extra. A medida que haces selecciones, el formulario se actualiza al instante para mostrar los cambios de precio. Utilicé HTML, CSS, JavaScript y React en el desarrollo de este proyecto.",
-          skills: ["react", "vercel", "axios", "router"],
+            "En este proyecto, he desarrollado la interfaz de usuario para un sitio web de pizzas. La página de inicio cuenta con un botón que te lleva a realizar un pedido de pizza. Al hacer clic, te lleva a una página con un formulario de pedido de pizza donde puedes elegir el tamaño, el grosor y los ingredientes extra. A medida que haces selecciones, el formulario se actualiza al instante para mostrar los cambios de precio. ",
+          skills: ["react", "yup", "react-router", "javascript", "axios"],
           bgColor: "bg-blue-100",
           bgColorDark: "bg-[#2D3235]",
           gitHubText: "Ver en Github",
@@ -358,9 +369,18 @@ export const languages = {
         {
           header: "Blog Personal",
           explanation:
-            "Este es un proyecto de sitio web personal donde muestro mi trabajo. He utilizado HTML, CSS, TypeScript, Tailwind y React para este proyecto.",
-          skills: ["react", "redux", "axios", "router", "vercel"],
-          bgColor: "bg-[#D9F6F1]",
+            "Este es un proyecto de sitio web personal donde muestro mi trabajo.",
+          skills: [
+            "react",
+            "react-context",
+            "github",
+            "axios",
+            "typescript",
+            "tailwind-css",
+            "vs-code",
+            "figma",
+          ],
+          bgColor: "bg-green-100",
           bgColorDark: "bg-[#495351]",
           gitHubText: "Ver en Github",
           gitHubLink: "https://github.com/hmzshin/personal-blog",
@@ -384,8 +404,8 @@ export const languages = {
             "toastify",
             "swiper",
             "slugify",
-            "infinite scroll component",
-            "react hook form",
+            "figma",
+            "react-hook form",
           ],
           bgColor: "bg-[#D9F6F1]",
           bgColorDark: "bg-[#495351]",

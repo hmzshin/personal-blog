@@ -14,7 +14,7 @@ const Projects = () => {
       className="bg-grayishYellow dark:bg-[#484148] py-20 customTransition"
     >
       <div className="xl:px-[7%]">
-        <h3 className="text-black dark:text-white text-2xl xl:text-4xl font-bold font-playfair tracking-wider text-center customTransition">
+        <h3 className="text-black dark:text-white text-4xl xl:text-6xl font-bold font-playfair tracking-wider text-center customTransition">
           {header}
         </h3>
         <div className="flex flex-wrap justify-center items-center gap-20 mt-10">
@@ -41,7 +41,7 @@ const Projects = () => {
                   </p>
                 ))}
               </div>
-              <div className="flex w-full justify-between font-sans font-semibold xl:text-xl">
+              <div className="flex w-full justify-between font-sans font-semibold text-sm xl:text-xl">
                 <a href={project.gitHubLink}>{project.gitHubText}</a>
                 <a className="flex gap-1 items-center" href={project.appLink}>
                   {project.appText}

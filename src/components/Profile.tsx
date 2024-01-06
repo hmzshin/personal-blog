@@ -17,7 +17,7 @@ const Profile = () => {
         <div className="w-[121px] h-[121px] rounded-full border-[21px] border-strongRed bg-grayishYellow dark:bg-transparent" />
       </div>
       <div className=" flex flex-col items-center justify-center px-[12%] ] gap-5 xl:gap-0  ">
-        <h3 className=" text-darkCyan dark:text-white text-4xl font-medium font-sans tracking-[0.36px] customTransition">
+        <h3 className=" text-darkCyan dark:text-white text-4xl xl:text-6xl font-medium font-sans tracking-[0.36px] customTransition">
           {header}
         </h3>
         <div className="flex flex-col gap-10 lg:flex-row ">

@@ -16,7 +16,7 @@ const Footer = () => {
           <span>{body}</span>
           <span
             id="decoration"
-            className="w-52 h-[18px] bg-[#82BBFF]  dark:bg-[#3968A0] rounded absolute top-10 left-28 -z-[1] customTransition"
+            className="w-52 h-[18px] bg-[#82BBFF]  dark:bg-[#3968A0] rounded absolute top-10 left-10 sm:left-28 lg:left-52 -z-[1] customTransition"
           />
         </p>
         <div className="flex flex-wrap gap-3 md:flex md:flex-col whitespace-nowrap">
