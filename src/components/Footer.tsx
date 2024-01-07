@@ -1,10 +1,8 @@
 import { useContext } from "react";
 import { LanguageContextObject } from "../context/LanguageContext";
-import { ThemeContextObject } from "../context/ThemeContext";
 
 const Footer = () => {
   const { language }: any = useContext(LanguageContextObject);
-  const { theme }: any = useContext(ThemeContextObject);
   const { links, body } = language.footer;
   return (
     <section
@@ -21,18 +19,15 @@ const Footer = () => {
         </p>
         <div className="flex flex-wrap gap-3 md:flex md:flex-col whitespace-nowrap">
           {links.map((link: any, index: number) => (
-            <a
-              key={index}
-              href={link.url}
-              className={`text-2xl font-medium font-sans leading-9 ${
-                theme == "dark" && link.color.includes("gray")
-                  ? "text-white"
-                  : link.color
-              }`}
-            >
-              {" "}
-              {link.page}{" "}
-            </a>
+            <div key={index}>
+              <a
+                href={link.url}
+                target="_blank"
+                className={`text-2xl font-medium font-sans leading-9 ${link.color}`}
+              >
+                {link.page}{" "}
+              </a>
+            </div>
           ))}
         </div>
       </div>

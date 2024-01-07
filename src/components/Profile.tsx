@@ -8,7 +8,7 @@ const Profile = () => {
   return (
     <section
       id="profile"
-      className="bg-grayishYellow dark:bg-[#2A262B] py-10 relative customTransition"
+      className="bg-grayishYellow dark:bg-[#2A262B] py-10 xl:py-20 relative customTransition"
     >
       <div
         id="decoration"
@@ -16,7 +16,7 @@ const Profile = () => {
       >
         <div className="w-[121px] h-[121px] rounded-full border-[21px] border-strongRed bg-grayishYellow dark:bg-transparent" />
       </div>
-      <div className=" flex flex-col items-center justify-center px-[12%] ] gap-5 xl:gap-0  ">
+      <div className=" flex flex-col items-center justify-center px-[12%] ] gap-5 xl:gap-20  ">
         <h3 className=" text-darkCyan dark:text-white text-4xl xl:text-6xl font-medium font-sans tracking-[0.36px] customTransition">
           {header}
         </h3>

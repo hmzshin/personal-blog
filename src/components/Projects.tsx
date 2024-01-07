@@ -14,7 +14,7 @@ const Projects = () => {
       className="bg-grayishYellow dark:bg-[#484148] py-20 customTransition"
     >
       <div className="xl:px-[7%]">
-        <h3 className="text-black dark:text-white text-4xl xl:text-6xl font-bold font-playfair tracking-wider text-center customTransition">
+        <h3 className="text-black dark:text-white text-4xl xl:text-6xl font-bold font-playfair tracking-wider text-center customTransition pb-10">
           {header}
         </h3>
         <div className="flex flex-wrap justify-center items-center gap-20 mt-10">
@@ -23,7 +23,7 @@ const Projects = () => {
               key={index}
               className={`text-black dark:text-white w-80  flex flex-col items-start self-stretch ${
                 theme == "dark" ? project.bgColorDark : project.bgColor
-              } rounded-xl gap-5 px-5 py-5 xl:w-[450px] xl:px-10 xl:py-10 xl:gap-10 shadow-2xl relative customTransition`}
+              } rounded-xl gap-5 px-5 py-5 xl:w-[450px] xl:px-10 xl:py-10 xl:gap-10 shadow-2xl relative  hover:scale-[0.98] transition-all duration-200`}
             >
               <h4 className=" text-[29px] xl:text-4xl font-bold font-playfair tracking-wider">
                 {project.header}
@@ -42,8 +42,14 @@ const Projects = () => {
                 ))}
               </div>
               <div className="flex w-full justify-between font-sans font-semibold text-sm xl:text-xl">
-                <a href={project.gitHubLink}>{project.gitHubText}</a>
-                <a className="flex gap-1 items-center" href={project.appLink}>
+                <a target="_blank" href={project.gitHubLink}>
+                  {project.gitHubText}
+                </a>
+                <a
+                  target="_blank"
+                  className="flex gap-1 items-center"
+                  href={project.appLink}
+                >
                   {project.appText}
                   <img src={project.arrowRight} />{" "}
                 </a>
