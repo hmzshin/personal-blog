@@ -122,7 +122,7 @@ const Main = () => {
               </a>
             </p>
           </section>
-          <section className="flex items-center">
+          <section className="flex items-center pb-10 lg:pb-0">
             <div className="w-[300px] h-[300px] rounded-full xl:w-[450px] xl:h-[450px] shadow-[10px_10px_0px_0px] shadow-strongRed relative">
               <img
                 className="w-full h-full rounded-full  object-cover object-top "

@@ -162,6 +162,7 @@ export const languages = {
           color: "text-rose-600 hover:text-rose-500",
         },
       ],
+      downloadText: "Click here to download my resume.",
     },
   },
   turkish: {
@@ -302,6 +303,7 @@ export const languages = {
           color: "text-rose-600 hover:text-rose-500",
         },
       ],
+      downloadText: "Özgeçmişimi indirmek için buraya tıklayın.",
     },
   },
   spanish: {
@@ -442,6 +444,8 @@ export const languages = {
           color: "text-rose-600 hover:text-rose-500",
         },
       ],
+
+      downloadText: "Haga clic aquí para descargar mi currículum.",
     },
   },
 };
