@@ -31,6 +31,15 @@ const Footer = () => {
           ))}
         </div>
       </div>
+      <p className="flex items-center justify-center text-xl text-darkCyan pt-10 xl:pt-0">
+        <a
+          href="./resume.pdf"
+          download="Hamza Şahin Resume"
+          className="text-rose-600 hover:text-rose-400 "
+        >
+          {downloadText}
+        </a>
+      </p>
     </section>
   );
 };
