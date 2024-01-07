@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { LanguageContextObject } from "../context/LanguageContext";
-
+import resume from "../assets/resume.pdf";
 const Footer = () => {
   const { language }: any = useContext(LanguageContextObject);
   const { links, body, downloadText } = language.footer;
@@ -33,7 +33,7 @@ const Footer = () => {
       </div>
       <p className="flex items-center justify-center text-xl text-darkCyan pt-10 xl:pt-0">
         <a
-          href="./resume.pdf"
+          href={resume}
           download="Hamza Şahin Resume"
           className="text-rose-600 hover:text-rose-400 "
         >
