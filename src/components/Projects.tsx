@@ -11,23 +11,21 @@ const Projects = () => {
   return (
     <section
       id="projects"
-      className="bg-grayishYellow dark:bg-[#484148] py-20 customTransition"
+      className="bg-grayishYellow dark:bg-[#484148] py-10 md:py-16 customTransition"
     >
       <div className="xl:px-[7%]">
-        <h3 className="text-black dark:text-white text-2xl xl:text-4xl font-bold font-playfair tracking-wider text-center customTransition">
-          {header}
-        </h3>
+        <h3 className="customTransition sectionHeader 2xl:pb-10">{header}</h3>
         <div className="flex flex-wrap justify-center items-center gap-20 mt-10">
           {body.map((project: any, index: number) => (
             <section
               key={index}
               className={`text-black dark:text-white w-80  flex flex-col items-start self-stretch ${
                 theme == "dark" ? project.bgColorDark : project.bgColor
-              } rounded-xl gap-5 px-5 py-5 xl:w-[450px] xl:px-10 xl:py-10 xl:gap-10 shadow-2xl relative customTransition`}
+              } rounded-xl gap-5 px-5 py-5 xl:w-[450px] xl:px-10 xl:py-10 xl:gap-10 shadow-2xl relative  hover:scale-[0.98] transition-all duration-200`}
             >
-              <h4 className=" text-[29px] xl:text-4xl font-bold font-playfair tracking-wider">
+              <h3 className="text-3xl font-bold font-playfair tracking-wider">
                 {project.header}
-              </h4>
+              </h3>
               <p className="text-base font-normal font-sans leading-normal">
                 {project.explanation}
               </p>
@@ -41,9 +39,15 @@ const Projects = () => {
                   </p>
                 ))}
               </div>
-              <div className="flex w-full justify-between font-sans font-semibold xl:text-xl">
-                <a href={project.gitHubLink}>{project.gitHubText}</a>
-                <a className="flex gap-1 items-center" href={project.appLink}>
+              <div className="flex w-full justify-between font-sans font-semibold text-sm xl:text-lg">
+                <a target="_blank" href={project.gitHubLink}>
+                  {project.gitHubText}
+                </a>
+                <a
+                  target="_blank"
+                  className="flex gap-1 items-center"
+                  href={project.appLink}
+                >
                   {project.appText}
                   <img src={project.arrowRight} />{" "}
                 </a>

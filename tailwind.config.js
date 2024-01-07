@@ -8,7 +8,7 @@ export default {
     },
     extend: {
       colors: {
-        grayishYellow: "#dad8d0",
+        grayishYellow: "#f8f3f0",
         strongRed: "#d32335",
         darkCyan: "#002c32",
       },

@@ -10,3 +10,7 @@
 .customTransition {
   @apply transition-all duration-300 ease-in-out;
 }
+
+.sectionHeader {
+  @apply text-center text-3xl md:text-4xl xl:text-5xl text-darkCyan font-bold font-sans tracking-[0.2px] dark:text-white;
+}
