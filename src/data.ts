@@ -48,7 +48,6 @@ export const languages = {
       basicInfo: {
         header: "Basic Information",
         body: [
-          ["Birthday", "10.06.1995"],
           ["City of Residence", "Sivas"],
           [
             "Educational Status",
@@ -193,7 +192,6 @@ export const languages = {
       basicInfo: {
         header: "Temel Bilgiler",
         body: [
-          ["Doğum Tarihi", "10.06.1995"],
           ["Yaşadığı Şehir", "Sivas"],
           [
             "Eğitim Durumu",
@@ -334,7 +332,6 @@ export const languages = {
       basicInfo: {
         header: "Información Básica",
         body: [
-          ["Fecha de nacimiento", "10.06.1995"],
           ["Ciudad de residencia", "Sivas"],
           [
             "Estado educativo",
